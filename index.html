@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derman.biz — Daily Command Center</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1E3A5F;--navy-mid:#3366A0;--navy-dark:#0F2440;--navy-mist:#C8D8EA;
+  --gold:#C9952B;--gold-light:#DCAE4D;--gold-deep:#A67A1D;--gold-pale:#F5E8C8;
+  --sand:#F5F0E6;--sand-dark:#E5DCC8;--warm-white:#FDFAF4;--linen:#EDE4D0;
+  --ink:#1A2332;--slate:#5A6878;--mist:#A0AEC0;
+  --success:#3D8B5E;--warning:#D4883A;--error:#C4504A;--info:#3366A0;
+}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--sand);color:var(--ink);line-height:1.5}
+
+/* ===== PASSWORD GATE ===== */
+#gate{position:fixed;inset:0;background:var(--navy-dark);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column}
+#gate.hidden{display:none}
+.gate-box{background:var(--warm-white);border-radius:16px;padding:48px 40px;max-width:380px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.gate-box h1{font-size:26px;color:var(--navy-dark);margin-bottom:4px;letter-spacing:-.5px}
+.gate-box h1 .dot{color:var(--gold)}
+.gate-box .sub{font-size:13px;color:var(--slate);margin-bottom:28px}
+.gate-input{width:100%;padding:14px 18px;border:2px solid var(--sand-dark);border-radius:10px;font-size:15px;outline:none;transition:.2s;background:var(--sand)}
+.gate-input:focus{border-color:var(--navy);background:#fff}
+.gate-btn{width:100%;padding:14px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;margin-top:12px;transition:.2s}
+.gate-btn:hover{background:var(--navy-mid)}
+.gate-err{color:var(--error);font-size:13px;margin-top:10px;min-height:20px}
+
+/* ===== HEADER ===== */
+header{background:var(--navy-dark);border-bottom:3px solid var(--gold);padding:16px 32px;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;width:100%}
+header h1{color:#fff;font-size:22px;font-weight:700;letter-spacing:-.3px}
+header h1 .dot{color:var(--gold)}
+header .tagline{color:var(--mist);font-size:11px;font-weight:500;font-style:italic;letter-spacing:1.5px;margin-top:2px}
+.header-meta{text-align:right;font-size:12px;color:var(--mist)}
+.header-meta .date{font-weight:600;color:var(--gold-light)}
+.header-btns{display:flex;gap:10px;align-items:center}
+.sailpin-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--navy);color:#fff;text-decoration:none;border-radius:8px;font-size:13px;font-weight:600;transition:.2s;border:1px solid var(--navy-mid)}
+.sailpin-btn:hover{background:var(--navy-mid);color:#fff}
+.admin-toggle{background:none;border:1px solid var(--navy-mid);color:var(--mist);width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:.2s}
+.admin-toggle:hover{background:var(--navy-mid);color:#fff}
+
+main{max-width:1280px;margin:0 auto;padding:24px 24px 80px}
+#dashboard{display:none}
+
+/* ===== ANNOUNCEMENT ===== */
+.announcement{padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.announcement.info{background:var(--navy-mist);color:var(--navy-dark);border:1px solid var(--navy-mid)}
+.announcement.warn{background:#FFF3CD;color:#856404;border:1px solid #FFE69C}
+.announcement.success{background:#D1E7DD;color:#0A3622;border:1px solid #A3CFBB}
+.announcement.hidden{display:none}
+
+/* ===== SECTION ===== */
+.section{margin-bottom:32px}
+.section-title{font-size:16px;font-weight:700;color:var(--navy-dark);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--sand-dark);display:flex;align-items:center;gap:8px}
+.section-title .icon{font-size:20px}
+
+/* ===== KPI CARDS ===== */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+.kpi-card{background:var(--warm-white);border-radius:12px;padding:20px;border-left:4px solid var(--navy);box-shadow:0 2px 8px rgba(15,36,64,.06);transition:.2s}
+.kpi-card.gold{border-left-color:var(--gold)}
+.kpi-card.mist{border-left-color:var(--navy-mid)}
+.kpi-card.success{border-left-color:var(--success)}
+.kpi-card.warn{border-left-color:var(--warning)}
+.kpi-card.danger{border-left-color:var(--error)}
+.kpi-card .label{font-size:12px;color:var(--slate);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.kpi-card .value{font-size:32px;font-weight:700;color:var(--ink);margin:4px 0}
+.kpi-card .detail{font-size:12px;color:var(--slate)}
+
+/* ===== TABS ===== */
+.tab-bar{display:flex;gap:6px;margin-bottom:20px;background:var(--navy-dark);border-radius:12px;padding:6px;box-shadow:0 4px 12px rgba(15,36,64,.15)}
+.tab{padding:12px 24px;font-size:14px;font-weight:700;color:#fff;cursor:pointer;border-radius:8px;transition:.2s;flex:1;text-align:center;letter-spacing:.3px;border:1px solid transparent}
+.tab-overview{background:var(--gold-deep)}
+.tab-overview:hover,.tab-overview.active{background:var(--gold);box-shadow:0 2px 8px rgba(201,149,43,.4);border-color:var(--gold-light)}
+.tab-calendar{background:#2d6a49}
+.tab-calendar:hover,.tab-calendar.active{background:var(--success);box-shadow:0 2px 8px rgba(61,139,94,.4);border-color:#5aad7a}
+.tab-asana{background:var(--navy)}
+.tab-asana:hover,.tab-asana.active{background:var(--navy-mid);box-shadow:0 2px 8px rgba(51,102,160,.4);border-color:#5a9ad5}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+
+/* ===== PROJECT HEALTH ===== */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:24px}
+.proj-card{background:var(--warm-white);border-radius:12px;padding:18px;box-shadow:0 2px 8px rgba(15,36,64,.06);border-top:4px solid var(--navy)}
+.proj-card .pname{font-size:14px;font-weight:700;color:var(--navy-dark);margin-bottom:8px}
+.proj-card .pbar{height:8px;background:var(--linen);border-radius:4px;overflow:hidden;margin-bottom:6px}
+.proj-card .pbar-fill{height:100%;background:var(--success);border-radius:4px;transition:width .5s}
+.proj-card .pstats{font-size:12px;color:var(--slate);display:flex;justify-content:space-between}
+
+/* ===== TASK TABLE ===== */
+.task-table{width:100%;border-collapse:collapse;background:var(--warm-white);border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(15,36,64,.06)}
+.task-table th{background:var(--navy-dark);color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:12px 16px;text-align:left;font-weight:600}
+.task-table td{padding:10px 16px;font-size:13px;border-bottom:1px solid var(--linen)}
+.task-table tr:last-child td{border:none}
+.task-table tr:hover td{background:var(--sand)}
+.overdue{color:var(--error);font-weight:600}
+.due-soon{color:var(--warning);font-weight:600}
+.on-time{color:var(--slate)}
+.project-tag{display:inline-block;background:var(--navy-mist);color:var(--navy);font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;margin:1px 2px}
+
+/* ===== CALL AGENDA ===== */
+.agenda-tabs{display:flex;gap:4px;margin-bottom:0;align-items:center}
+.agenda-tab{padding:10px 20px;font-size:13px;font-weight:700;color:var(--slate);cursor:pointer;border-radius:10px 10px 0 0;transition:.2s;background:var(--sand-dark)}
+.agenda-tab.active{background:var(--warm-white);color:var(--navy-dark);box-shadow:0 -2px 8px rgba(15,36,64,.06)}
+.agenda-tab:hover:not(.active){background:var(--linen)}
+.agenda-count{display:inline-block;background:var(--navy-mist);color:var(--navy);font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:700}
+.agenda-tab.active .agenda-count{background:var(--navy);color:#fff}
+.agenda-box{background:var(--warm-white);border-radius:0 12px 12px 12px;padding:24px 28px;box-shadow:0 2px 12px rgba(15,36,64,.08);border-left:5px solid var(--navy);margin-bottom:24px;position:relative;overflow:hidden}
+.agenda-item{padding:10px 0;border-bottom:1px solid var(--linen);font-size:14px;display:flex;align-items:flex-start;gap:10px}
+.agenda-item>.agenda-check,.agenda-item>.agenda-num{margin-top:2px;flex-shrink:0}
+.agenda-item:last-child{border:none}
+.agenda-check{width:20px;height:20px;accent-color:var(--navy);cursor:pointer;flex-shrink:0}
+.agenda-item.checked .agenda-text{text-decoration:line-through;color:var(--slate)}
+.agenda-item.checked{opacity:.5}
+.agenda-num{background:var(--navy);color:#fff;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.asana-link{cursor:pointer;text-decoration:none;color:var(--navy-mid);background:var(--navy-mist);padding:3px 8px;border-radius:10px;font-weight:600;white-space:nowrap;transition:all .2s}
+.asana-link:hover{color:#fff;background:var(--navy)}
+.agenda-content{flex:1;min-width:0;overflow:hidden}
+.subtask-badge{font-size:10px;background:var(--navy-mist);color:var(--navy);padding:2px 6px;border-radius:10px;text-decoration:none;white-space:nowrap;font-weight:600}
+.subtask-badge:hover{background:var(--navy);color:#fff}
+.desc-toggle{background:none;border:none;color:var(--slate);font-size:10px;cursor:pointer;padding:0 4px;vertical-align:middle;transition:transform .2s}
+.desc-toggle.open{transform:rotate(180deg)}
+.agenda-desc{display:none;font-size:12px;color:var(--slate);margin-top:6px;padding:8px 12px;background:var(--warm-white);border-left:3px solid var(--navy-mist);border-radius:0 6px 6px 0;line-height:1.5;word-break:break-word}
+.agenda-desc.show{display:block}
+.detail-section{margin-bottom:10px}
+.detail-section:last-child{margin-bottom:0}
+.detail-label{font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.detail-row{font-size:12px;padding:2px 0}
+.detail-comment{font-size:12px;padding:4px 0;border-bottom:1px solid var(--linen)}
+.detail-comment:last-child{border-bottom:none}
+.agenda-date-header{font-size:13px;font-weight:700;color:var(--navy);background:var(--navy-mist);padding:6px 14px;border-radius:6px;margin:14px 0 8px;letter-spacing:.5px}
+.agenda-date-header:first-child{margin-top:0}
+.expand-all-wrap{margin-bottom:8px}
+.expand-all-btn{background:var(--navy-mist);color:var(--navy);border:1px solid var(--navy-mid);border-radius:8px;padding:5px 14px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.3px}
+.expand-all-btn:hover{background:var(--navy);color:#fff}
+.expand-all-btn.loading{opacity:.6;cursor:wait}
+.expand-all-btn.done{background:var(--success);color:#fff;border-color:var(--success)}
+
+/* ===== NOTES ===== */
+.notes-box{background:var(--warm-white);border-radius:12px;padding:24px 28px;box-shadow:0 2px 12px rgba(15,36,64,.08);border-left:5px solid var(--gold);margin-bottom:24px}
+.note-item{padding:10px 0;border-bottom:1px solid var(--linen);font-size:14px}
+.note-item:last-child{border:none}
+.note-item .note-title{font-weight:700;color:var(--navy-dark)}
+.note-item .note-date{font-size:11px;color:var(--slate)}
+
+/* ===== CALENDAR EVENTS ===== */
+.cal-timeline{display:flex;flex-direction:column;gap:8px}
+.cal-event{background:var(--warm-white);border-radius:10px;padding:14px 18px;box-shadow:0 2px 8px rgba(15,36,64,.06);border-left:4px solid var(--navy);display:flex;gap:16px;align-items:flex-start;transition:.2s}
+.cal-event:hover{box-shadow:0 4px 12px rgba(15,36,64,.12)}
+.cal-event.past{opacity:.5;border-left-color:var(--mist)}
+.cal-event.now{border-left-color:var(--gold);background:var(--gold-pale)}
+.cal-time{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap;min-width:90px}
+.cal-details{flex:1;min-width:0}
+.cal-summary{font-size:14px;font-weight:600;color:var(--ink)}
+.cal-location{font-size:12px;color:var(--slate);margin-top:2px}
+.cal-attendees{font-size:11px;color:var(--mist);margin-top:4px}
+.cal-link{font-size:11px;color:var(--navy-mid);text-decoration:none;font-weight:600}
+.cal-link:hover{color:var(--navy-dark)}
+
+/* ===== LOADING / ERROR ===== */
+.loading{text-align:center;padding:40px;color:var(--slate);font-size:14px}
+.spinner{display:inline-block;width:28px;height:28px;border:3px solid var(--linen);border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error-box{background:#FCE4E4;border:1px solid var(--error);color:var(--error);padding:12px 16px;border-radius:10px;font-size:13px;margin-bottom:16px}
+
+/* ===== STATUS ===== */
+.status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.status-dot.green{background:var(--success)}
+.status-dot.yellow{background:var(--warning)}
+.status-dot.red{background:var(--error)}
+
+/* ===== TOP UPDATES ===== */
+#top-updates{margin-bottom:28px;padding-bottom:24px;border-bottom:2px solid var(--sand-dark)}
+.updates-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.updates-col{min-width:0}
+
+/* ===== ADMIN PANEL ===== */
+#admin-panel{display:none;background:var(--warm-white);border:2px solid var(--gold);border-radius:12px;padding:24px;margin-bottom:24px;box-shadow:0 4px 16px rgba(15,36,64,.1)}
+#admin-panel.show{display:block}
+.admin-title{font-size:16px;font-weight:700;color:var(--navy-dark);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.admin-section{margin-bottom:16px}
+.admin-label{font-size:12px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.admin-textarea{width:100%;min-height:100px;padding:12px;border:1px solid var(--sand-dark);border-radius:8px;font-family:'Menlo','Consolas',monospace;font-size:12px;resize:vertical;background:var(--sand)}
+.admin-textarea:focus{border-color:var(--navy);outline:none}
+.admin-btn{padding:10px 24px;background:var(--navy);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:13px;transition:.2s}
+.admin-btn:hover{background:var(--navy-mid)}
+.admin-btn.saving{opacity:.6;cursor:wait}
+.admin-status{font-size:12px;color:var(--success);margin-left:12px;display:inline-block}
+
+footer{text-align:center;padding:24px;font-size:12px;color:var(--slate);border-top:1px solid var(--sand-dark);margin-top:32px}
+footer strong{color:var(--navy-dark)}
+
+@media(max-width:768px){
+  header .header-inner{flex-direction:column;gap:8px;text-align:center}
+  .kpi-grid{grid-template-columns:1fr 1fr}
+  .tab{padding:8px 12px;font-size:12px}
+  .updates-row{grid-template-columns:1fr}
+  .header-btns{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== PASSWORD GATE ===== -->
+<div id="gate">
+  <div class="gate-box">
+    <h1>Derman<span class="dot">.</span>biz</h1>
+    <div class="sub">Daily Command Center</div>
+    <form onsubmit="doLogin(event)">
+      <input type="password" class="gate-input" id="gate-pw" placeholder="Enter password" autocomplete="current-password">
+      <button type="submit" class="gate-btn" id="gate-btn">Enter</button>
+    </form>
+    <div class="gate-err" id="gate-err"></div>
+  </div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <div>
+      <h1>Derman<span class="dot">.</span>biz &mdash; Daily Command Center</h1>
+      <div class="tagline">Operational Intelligence</div>
+    </div>
+    <div class="header-btns">
+      <a href="https://sailpin-dashboard.vercel.app/" target="_blank" class="sailpin-btn">&#9981; SailPin</a>
+      <button class="admin-toggle" onclick="toggleAdmin()" title="Admin Panel">&#9881;</button>
+    </div>
+    <div class="header-meta">
+      <div class="date" id="header-date">Loading...</div>
+      <div id="header-by">Derman via Claude</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<div id="dashboard">
+
+<!-- ADMIN PANEL (hidden by default) -->
+<div id="admin-panel">
+  <div class="admin-title">&#9881; Admin Panel</div>
+  <div class="admin-section">
+    <div class="admin-label">Dashboard Content (JSON)</div>
+    <textarea class="admin-textarea" id="admin-json" rows="14"></textarea>
+  </div>
+  <button class="admin-btn" id="admin-save-btn" onclick="saveAdmin()">Save &amp; Publish</button>
+  <span class="admin-status" id="admin-status"></span>
+  <div style="font-size:11px;color:var(--slate);margin-top:8px">Edit the JSON above and click Save. Changes push to GitHub and redeploy automatically (~60s).</div>
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement hidden" id="announcement"></div>
+
+<!-- ===== CALL AGENDA + NOTES (always visible at top) ===== -->
+<div id="top-updates">
+  <div class="section-title"><span class="icon">&#127909;</span> Call Agenda</div>
+  <div class="agenda-tabs">
+    <div class="agenda-tab active" data-atab="current" onclick="switchAgendaTab('current')">Current Items <span class="agenda-count" id="count-current">0</span></div>
+    <div class="agenda-tab" data-atab="completed" onclick="switchAgendaTab('completed')">Completed Items <span class="agenda-count" id="count-completed">0</span></div>
+  </div>
+  <div class="agenda-box" id="agenda-current">
+    <div class="loading"><div class="spinner"></div><br>Loading agenda...</div>
+  </div>
+  <div class="agenda-box" id="agenda-completed" style="display:none">
+    <p style="color:var(--slate);font-size:13px;">No completed items yet.</p>
+  </div>
+
+  <div class="updates-row">
+    <div class="updates-col">
+      <div class="section-title"><span class="icon">&#128204;</span> Pinned Notes</div>
+      <div class="notes-box" id="pinned-notes">
+        <div class="loading"><div class="spinner"></div><br>Loading notes...</div>
+      </div>
+    </div>
+    <div class="updates-col">
+      <div class="section-title"><span class="icon">&#128994;</span> Status Updates</div>
+      <div id="status-updates">
+        <div class="loading"><div class="spinner"></div><br>Loading...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MAIN TABS ===== -->
+<div class="tab-bar" id="main-tabs">
+  <div class="tab tab-overview active" data-tab="overview">Overview</div>
+  <div class="tab tab-calendar" data-tab="calendar">Calendar</div>
+  <div class="tab tab-asana" data-tab="asana">Asana Tasks</div>
+</div>
+
+<!-- ===== OVERVIEW TAB ===== -->
+<div class="tab-panel active" id="panel-overview">
+  <div class="kpi-grid" id="overview-kpis">
+    <div class="kpi-card"><div class="label">Loading...</div><div class="value">&mdash;</div></div>
+  </div>
+
+  <div class="section-title"><span class="icon">&#9881;</span> Project Health</div>
+  <div class="projects-grid" id="project-cards">
+    <div class="loading"><div class="spinner"></div><br>Loading projects...</div>
+  </div>
+
+  <div class="section-title"><span class="icon">&#9888;</span> Overdue Tasks</div>
+  <div id="overview-overdue">
+    <div class="loading"><div class="spinner"></div><br>Loading overdue tasks...</div>
+  </div>
+</div>
+
+<!-- ===== CALENDAR TAB ===== -->
+<div class="tab-panel" id="panel-calendar">
+  <div class="section-title"><span class="icon">&#128197;</span> Today's Schedule</div>
+  <div id="cal-events">
+    <div class="loading"><div class="spinner"></div><br>Loading calendar...</div>
+  </div>
+</div>
+
+<!-- ===== ASANA TAB ===== -->
+<div class="tab-panel" id="panel-asana">
+  <div class="section-title"><span class="icon">&#128308;</span> Overdue Tasks</div>
+  <div id="asana-overdue">
+    <div class="loading"><div class="spinner"></div><br>Loading...</div>
+  </div>
+
+  <div class="section-title"><span class="icon">&#128992;</span> Upcoming (Next 14 Days)</div>
+  <div id="asana-upcoming">
+    <div class="loading"><div class="spinner"></div><br>Loading...</div>
+  </div>
+
+  <div class="section-title"><span class="icon">&#9744;</span> Unscheduled Tasks (No Due Date)</div>
+  <div id="asana-nodue">
+    <div class="loading"><div class="spinner"></div><br>Loading...</div>
+  </div>
+</div>
+
+</div><!-- /dashboard -->
+</main>
+
+<footer>
+  <strong>Derman.biz Daily Command Center</strong> &bull; Operational Intelligence &bull;
+  Data refreshes every 5 minutes &bull; <span id="footer-fetched">Loading...</span>
+</footer>
+
+<script>
+const TODAY = new Date().toISOString().split('T')[0];
+const AUTH_KEY = 'derman_dash_token';
+
+// ===== PASSWORD GATE =====
+function checkAuth() {
+  const token = localStorage.getItem(AUTH_KEY);
+  if (token) {
+    document.getElementById('gate').classList.add('hidden');
+    document.getElementById('dashboard').style.display = 'block';
+    fetchAll();
+  }
+}
+
+async function doLogin(e) {
+  e.preventDefault();
+  const pw = document.getElementById('gate-pw').value;
+  const btn = document.getElementById('gate-btn');
+  const err = document.getElementById('gate-err');
+  if (!pw) { err.textContent = 'Please enter a password.'; return; }
+  btn.textContent = 'Checking...';
+  btn.disabled = true;
+  err.textContent = '';
+  try {
+    const res = await fetch('/api/auth', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pw })
+    });
+    const data = await res.json();
+    if (data.success && data.token) {
+      localStorage.setItem(AUTH_KEY, data.token);
+      document.getElementById('gate').classList.add('hidden');
+      document.getElementById('dashboard').style.display = 'block';
+      fetchAll();
+    } else {
+      err.textContent = data.error || 'Invalid password.';
+    }
+  } catch (ex) {
+    err.textContent = 'Connection error. Try again.';
+  }
+  btn.textContent = 'Enter';
+  btn.disabled = false;
+}
+
+checkAuth();
+
+// ===== TAB SWITCHING =====
+document.querySelectorAll('#main-tabs .tab').forEach(tab => {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('#main-tabs .tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    this.classList.add('active');
+    document.getElementById('panel-' + this.dataset.tab).classList.add('active');
+  });
+});
+
+// ===== HELPERS =====
+function daysFrom(dateStr) {
+  if (!dateStr) return null;
+  return Math.floor((new Date(TODAY) - new Date(dateStr)) / 86400000);
+}
+
+function fmtDate(d) {
+  if (!d) return '—';
+  return new Date(d + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function dueCls(d) {
+  if (!d) return 'on-time';
+  const diff = daysFrom(d);
+  if (diff > 0) return 'overdue';
+  if (diff >= -3) return 'due-soon';
+  return 'on-time';
+}
+
+function dueLabel(d) {
+  if (!d) return '—';
+  const diff = daysFrom(d);
+  if (diff > 0) return fmtDate(d) + ' (' + diff + 'd overdue)';
+  if (diff === 0) return fmtDate(d) + ' (today)';
+  if (diff >= -3) return fmtDate(d) + ' (in ' + Math.abs(diff) + 'd)';
+  return fmtDate(d);
+}
+
+function linkify(text) {
+  if (!text) return '';
+  return text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener" style="color:var(--navy-mid);word-break:break-all">$1</a>');
+}
+
+function taskTable(tasks, containerId) {
+  const el = document.getElementById(containerId);
+  if (!tasks || !tasks.length) {
+    el.innerHTML = '<p style="color:var(--slate);font-size:13px;padding:12px;">No tasks found.</p>';
+    return;
+  }
+  let html = '<table class="task-table"><thead><tr><th>Task</th><th>Assigned To</th><th>Due</th><th>Project</th></tr></thead><tbody>';
+  tasks.forEach(t => {
+    const cls = dueCls(t.due_on);
+    const projs = (t.projects || []).map(p => '<span class="project-tag">' + p + '</span>').join(' ') || '—';
+    const assignee = t.assignee || '<span style="color:var(--mist)">Unassigned</span>';
+    html += '<tr><td>' + (t.name || '—') + '</td><td>' + assignee + '</td><td class="' + cls + '">' + dueLabel(t.due_on) + '</td><td>' + projs + '</td></tr>';
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// ===== DATA FETCHING =====
+let calendar = null, asana = null, content = null;
+
+async function fetchAll() {
+  const results = await Promise.allSettled([
+    fetch('/api/calendar').then(r => r.json()),
+    fetch('/api/asana').then(r => r.json()),
+    fetch('/dashboard-content.json?' + Date.now()).then(r => r.json())
+  ]);
+
+  if (results[0].status === 'fulfilled' && !results[0].value.error) calendar = results[0].value;
+  else document.getElementById('cal-events').innerHTML = '<div class="error-box">Calendar data unavailable. Check Google OAuth credentials in Vercel settings.</div>';
+
+  if (results[1].status === 'fulfilled' && !results[1].value.error) asana = results[1].value;
+  else document.getElementById('asana-overdue').innerHTML = '<div class="error-box">Asana data unavailable. Check API token in Vercel settings.</div>';
+
+  if (results[2].status === 'fulfilled') content = results[2].value;
+
+  renderAll();
+}
+
+// ===== RENDERERS =====
+function renderAll() {
+  const fetchTime = calendar?.fetchedAt || asana?.fetchedAt || new Date().toISOString();
+  const dt = new Date(fetchTime);
+  document.getElementById('header-date').textContent = 'Data as of: ' + dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' });
+  document.getElementById('header-by').textContent = content?.lastUpdatedBy || 'Updated by Derman via Claude';
+  document.getElementById('footer-fetched').textContent = 'Last data fetch: ' + dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+  if (content?.announcement?.show) {
+    const ann = document.getElementById('announcement');
+    ann.className = 'announcement ' + (content.announcement.type || 'info');
+    ann.textContent = content.announcement.text;
+  }
+
+  if (content) {
+    document.getElementById('admin-json').value = JSON.stringify(content, null, 2);
+  }
+
+  renderOverview();
+  renderCalendar();
+  renderAsana();
+  renderUpdates();
+}
+
+function renderOverview() {
+  const eventsToday = calendar?.events?.length || 0;
+  const totalIncomplete = asana?.summary?.totalIncomplete || 0;
+  const totalComplete = asana?.summary?.totalComplete || 0;
+  const overdueCount = asana?.summary?.overdueCount || 0;
+
+  document.getElementById('overview-kpis').innerHTML = [
+    { label: 'Calendar Today', value: eventsToday, detail: eventsToday === 1 ? '1 event scheduled' : eventsToday + ' events scheduled', cls: 'gold' },
+    { label: 'Open Tasks', value: totalIncomplete, detail: totalComplete + ' completed', cls: 'mist' },
+    { label: 'Overdue', value: overdueCount, detail: overdueCount > 0 ? 'Needs attention now' : 'All clear', cls: overdueCount > 0 ? 'danger' : 'success' },
+    { label: 'Completed', value: totalComplete, detail: 'Across all projects', cls: 'success' }
+  ].map(m => '<div class="kpi-card ' + m.cls + '"><div class="label">' + m.label + '</div><div class="value">' + m.value + '</div><div class="detail">' + m.detail + '</div></div>').join('');
+
+  if (asana?.projects) {
+    document.getElementById('project-cards').innerHTML = asana.projects.map(p => {
+      const pct = p.total > 0 ? Math.round((p.completed / p.total) * 100) : 0;
+      return '<div class="proj-card"><div class="pname">' + p.name + '</div><div class="pbar"><div class="pbar-fill" style="width:' + pct + '%"></div></div><div class="pstats"><span>' + p.completed + '/' + p.total + ' tasks</span><span>' + pct + '%</span></div></div>';
+    }).join('');
+  }
+
+  if (asana?.overdueTasks) {
+    taskTable(asana.overdueTasks.slice(0, 15), 'overview-overdue');
+  }
+}
+
+function renderCalendar() {
+  const el = document.getElementById('cal-events');
+  if (!calendar?.events) return;
+
+  if (calendar.events.length === 0) {
+    el.innerHTML = '<p style="color:var(--slate);font-size:14px;padding:20px;text-align:center;">No events scheduled for today.</p>';
+    return;
+  }
+
+  const now = new Date();
+  let html = '<div class="cal-timeline">';
+  calendar.events.forEach(evt => {
+    const startDT = evt.start?.dateTime;
+    let timeStr = 'All day';
+    let cls = '';
+
+    if (startDT && startDT.includes('T')) {
+      const s = new Date(startDT);
+      const e = evt.end?.dateTime ? new Date(evt.end.dateTime) : null;
+      timeStr = s.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      if (e) timeStr += ' – ' + e.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+      if (e && e < now) cls = ' past';
+      else if (s <= now && (!e || e > now)) cls = ' now';
+    }
+
+    html += '<div class="cal-event' + cls + '">';
+    html += '<div class="cal-time">' + timeStr + '</div>';
+    html += '<div class="cal-details">';
+    html += '<div class="cal-summary">' + (evt.summary || '(No title)') + '</div>';
+    if (evt.location) html += '<div class="cal-location">📍 ' + evt.location + '</div>';
+    if (evt.attendees?.length) {
+      const names = evt.attendees.slice(0, 5).map(a => a.email.split('@')[0]).join(', ');
+      const extra = evt.attendees.length > 5 ? ' +' + (evt.attendees.length - 5) + ' more' : '';
+      html += '<div class="cal-attendees">👥 ' + names + extra + '</div>';
+    }
+    if (evt.htmlLink) html += '<a href="' + evt.htmlLink + '" target="_blank" class="cal-link">Open in Calendar ↗</a>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function renderAsana() {
+  if (!asana) return;
+  taskTable(asana.overdueTasks, 'asana-overdue');
+  taskTable(asana.upcomingTasks, 'asana-upcoming');
+  taskTable(asana.noDueTasks, 'asana-nodue');
+}
+
+function renderUpdates() {
+  if (!content) return;
+
+  // ===== CALL AGENDA =====
+  if (content.callAgenda?.items?.length) {
+    const allItems = content.callAgenda.items.map((item, idx) => ({
+      text: typeof item === 'string' ? item : item.text,
+      gid: typeof item === 'object' ? item.asanaGid : '',
+      date: (typeof item === 'object' && item.date) ? item.date : null,
+      description: (typeof item === 'object' && item.description) ? item.description : '',
+      permalink: (typeof item === 'object' && item.permalink) ? item.permalink : '',
+      subtaskCount: (typeof item === 'object' && item.subtaskCount) ? item.subtaskCount : 0,
+      completed: (typeof item === 'object' && item.completed) ? true : false,
+      idx: idx
+    }));
+
+    let savedState = [];
+    try { savedState = JSON.parse(localStorage.getItem('dd_agenda') || '[]'); } catch(e) {}
+
+    const currentItems = [];
+    const completedItems = [];
+    allItems.forEach(item => {
+      const isDone = item.gid ? item.completed : savedState[item.idx];
+      if (isDone) completedItems.push(item);
+      else currentItems.push(item);
+    });
+
+    function renderItem(item, counter) {
+      const isChecked = item.gid ? item.completed : savedState[item.idx];
+      const checked = isChecked ? ' checked' : '';
+      const checkedCls = isChecked ? ' checked' : '';
+      let badge = '';
+      if (item.permalink) {
+        badge = '<a href="' + item.permalink + '" target="_blank" rel="noopener" class="asana-link" title="Open in Asana">Asana&nbsp;↗</a>';
+      } else if (item.gid) {
+        badge = '<a href="https://app.asana.com/0/0/' + item.gid + '" target="_blank" rel="noopener" class="asana-link" title="Open in Asana">Asana&nbsp;↗</a>';
+      }
+      let subBadge = '';
+      if (item.subtaskCount > 0) {
+        const subLink = item.permalink || ('https://app.asana.com/0/0/' + item.gid);
+        subBadge = '<a href="' + subLink + '" target="_blank" rel="noopener" class="subtask-badge" title="' + item.subtaskCount + ' subtask' + (item.subtaskCount > 1 ? 's' : '') + '">' + item.subtaskCount + ' sub</a>';
+      }
+      const descId = 'desc-' + item.idx;
+      let html = '<div class="agenda-item' + checkedCls + '" data-gid="' + (item.gid || '') + '" data-idx="' + item.idx + '">';
+      html += '<input type="checkbox" class="agenda-check" onchange="toggleAgenda(this)"' + checked + '>';
+      html += '<span class="agenda-num">' + counter + '</span>';
+      html += '<div class="agenda-content"><span class="agenda-text"><strong>' + linkify(item.text) + '</strong></span>';
+      if (subBadge) html += ' ' + subBadge;
+      if (badge) html += ' ' + badge;
+      if (item.gid) {
+        html += ' <button class="desc-toggle" onclick="toggleDesc(' + item.idx + ')" title="Show details">▼</button>';
+      }
+      html += '<div class="agenda-desc" id="' + descId + '"></div>';
+      html += '</div></div>';
+      return html;
+    }
+
+    function renderItemList(items) {
+      if (!items.length) return '';
+      const dated = {};
+      const undated = [];
+      items.forEach(item => {
+        if (!item.date) { undated.push(item); return; }
+        if (!dated[item.date]) dated[item.date] = [];
+        dated[item.date].push(item);
+      });
+      const sortedDates = Object.keys(dated).sort().reverse();
+      let html = '';
+      let counter = 1;
+      sortedDates.forEach(date => {
+        const d = new Date(date + 'T00:00:00');
+        const dayDiff = Math.round((d - new Date(TODAY + 'T00:00:00')) / 86400000);
+        let label = d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' });
+        if (dayDiff === 0) label = 'Today — ' + label;
+        else if (dayDiff === 1) label = 'Tomorrow — ' + label;
+        else if (dayDiff === -1) label = 'Yesterday — ' + label;
+        html += '<div class="agenda-date-header">' + label + '</div>';
+        dated[date].forEach(item => { html += renderItem(item, counter++); });
+      });
+      if (undated.length) {
+        html += '<div class="agenda-date-header" style="color:var(--slate);font-style:italic">Undated</div>';
+        undated.forEach(item => { html += renderItem(item, counter++); });
+      }
+      return html;
+    }
+
+    const currentHtml = renderItemList(currentItems);
+    const expandBtn = currentItems.some(i => i.gid) ? '<div class="expand-all-wrap"><button class="expand-all-btn" id="expand-all-btn" onclick="toggleAllDetails()">▼ Expand All</button></div>' : '';
+    document.getElementById('agenda-current').innerHTML = expandBtn + (currentHtml || '<p style="color:var(--slate);font-size:13px;">All items completed!</p>');
+
+    const completedHtml = renderItemList(completedItems);
+    document.getElementById('agenda-completed').innerHTML = completedHtml || '<p style="color:var(--slate);font-size:13px;">No completed items yet.</p>';
+    updateAgendaCounts();
+  } else {
+    document.getElementById('agenda-current').innerHTML = '<p style="color:var(--slate);font-size:13px;">No agenda items set.</p>';
+    document.getElementById('agenda-completed').innerHTML = '<p style="color:var(--slate);font-size:13px;">No completed items yet.</p>';
+    updateAgendaCounts();
+  }
+
+  // Pinned notes
+  if (content.pinnedNotes?.length) {
+    document.getElementById('pinned-notes').innerHTML = content.pinnedNotes.map(n =>
+      '<div class="note-item"><div class="note-title">' + n.title + '</div><div>' + linkify(n.text) + '</div><div class="note-date">' + n.date + '</div></div>'
+    ).join('');
+  } else {
+    document.getElementById('pinned-notes').innerHTML = '<p style="color:var(--slate);font-size:13px;">No pinned notes.</p>';
+  }
+
+  // Status updates
+  if (content.statusUpdates?.length) {
+    let html = '';
+    content.statusUpdates.forEach(s => {
+      html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--linen);font-size:13px"><span class="status-dot ' + s.status + '"></span><strong>' + s.project + '</strong> — ' + s.note + ' <span style="font-size:11px;color:var(--slate);margin-left:auto">' + s.date + '</span></div>';
+    });
+    document.getElementById('status-updates').innerHTML = '<div style="background:var(--warm-white);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(15,36,64,.06)">' + html + '</div>';
+  }
+}
+
+// ===== DETAIL PANEL: LAZY-LOAD FROM ASANA =====
+const detailCache = {};
+
+function toggleDesc(idx) {
+  const panel = document.getElementById('desc-' + idx);
+  if (!panel) return;
+  const item = panel.closest('.agenda-item');
+  const btn = item?.querySelector('.desc-toggle');
+  const isOpen = panel.classList.contains('show');
+  if (isOpen) { panel.classList.remove('show'); if (btn) btn.classList.remove('open'); return; }
+  panel.classList.add('show');
+  if (btn) btn.classList.add('open');
+  if (panel.dataset.loaded) return;
+  const gid = item?.dataset.gid;
+  if (!gid) { panel.dataset.loaded = '1'; return; }
+  if (detailCache[gid]) { renderDetails(panel, detailCache[gid], idx); return; }
+  const prev = panel.innerHTML;
+  panel.innerHTML = '<div style="color:var(--slate);font-size:12px;padding:4px 0">⏳ Loading details from Asana...</div>' + prev;
+  fetch('/api/asana-task-details?gid=' + gid)
+    .then(r => r.json())
+    .then(data => {
+      if (data.success) { detailCache[gid] = data; renderDetails(panel, data, idx); }
+      else { panel.innerHTML = prev || '<div style="color:var(--error);font-size:12px">Failed to load</div>'; panel.dataset.loaded = '1'; }
+    })
+    .catch(() => { panel.innerHTML = prev || '<div style="color:var(--error);font-size:12px">Failed to load</div>'; panel.dataset.loaded = '1'; });
+}
+
+function renderDetails(panel, data, idx) {
+  let html = '';
+  const item = content?.callAgenda?.items?.[idx];
+  const desc = item?.description || '';
+  if (desc) {
+    html += '<div class="detail-section"><div class="detail-label">Description</div>';
+    html += '<div>' + linkify(desc.replace(/\n/g, '<br>')) + '</div></div>';
+  }
+  if (data.subtasks?.length) {
+    html += '<div class="detail-section"><div class="detail-label">Subtasks (' + data.subtasks.length + ')</div>';
+    data.subtasks.forEach(s => {
+      const icon = s.completed ? '✅' : '⬜';
+      const cls = s.completed ? ' style="text-decoration:line-through;opacity:.6"' : '';
+      html += '<div class="detail-row"' + cls + '>' + icon + ' ' + linkify(s.name);
+      if (s.due_on) html += ' <span style="color:var(--slate);font-size:11px">(' + s.due_on + ')</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+  if (data.comments?.length) {
+    html += '<div class="detail-section"><div class="detail-label">Comments (' + data.comments.length + ')</div>';
+    data.comments.forEach(c => {
+      html += '<div class="detail-comment"><strong>' + c.author + '</strong>';
+      if (c.date) html += ' <span style="color:var(--slate);font-size:10px">' + c.date + '</span>';
+      html += '<div>' + linkify(c.text.replace(/\n/g, '<br>')) + '</div></div>';
+    });
+    html += '</div>';
+  }
+  if (data.attachments?.length) {
+    html += '<div class="detail-section"><div class="detail-label">Attachments (' + data.attachments.length + ')</div>';
+    data.attachments.forEach(a => {
+      html += a.url
+        ? '<div class="detail-row">📎 <a href="' + a.url + '" target="_blank" rel="noopener" style="color:var(--navy-mid)">' + a.name + '</a></div>'
+        : '<div class="detail-row">📎 ' + a.name + '</div>';
+    });
+    html += '</div>';
+  }
+  if (!html && !desc) html = '<div style="color:var(--slate);font-size:12px">No additional details on this task.</div>';
+  panel.innerHTML = html;
+  panel.dataset.loaded = '1';
+}
+
+// ===== EXPAND ALL =====
+let allExpanded = false;
+function toggleAllDetails() {
+  const btn = document.getElementById('expand-all-btn');
+  if (!btn) return;
+  const items = document.querySelectorAll('#agenda-current .agenda-item[data-gid]');
+  if (!items.length) return;
+  if (allExpanded) {
+    items.forEach(item => {
+      const panel = document.getElementById('desc-' + item.dataset.idx);
+      const toggle = item.querySelector('.desc-toggle');
+      if (panel) panel.classList.remove('show');
+      if (toggle) toggle.classList.remove('open');
+    });
+    btn.innerHTML = '▼ Expand All';
+    btn.classList.remove('done');
+    allExpanded = false;
+    return;
+  }
+  btn.classList.add('loading');
+  btn.textContent = '⏳ Fetching all...';
+  allExpanded = true;
+  const fetches = [];
+  items.forEach(item => {
+    const idx = item.dataset.idx;
+    const gid = item.dataset.gid;
+    const panel = document.getElementById('desc-' + idx);
+    const toggle = item.querySelector('.desc-toggle');
+    if (!panel || !gid) return;
+    panel.classList.add('show');
+    if (toggle) toggle.classList.add('open');
+    if (panel.dataset.loaded) { fetches.push(Promise.resolve()); return; }
+    if (detailCache[gid]) { renderDetails(panel, detailCache[gid], parseInt(idx)); fetches.push(Promise.resolve()); return; }
+    panel.innerHTML = '<div style="color:var(--slate);font-size:12px;padding:4px 0">⏳ Loading...</div>';
+    fetches.push(
+      fetch('/api/asana-task-details?gid=' + gid).then(r => r.json()).then(data => {
+        if (data.success) { detailCache[gid] = data; renderDetails(panel, data, parseInt(idx)); }
+        else { panel.innerHTML = '<div style="color:var(--error);font-size:12px">Failed</div>'; panel.dataset.loaded = '1'; }
+      }).catch(() => { panel.innerHTML = '<div style="color:var(--error);font-size:12px">Failed</div>'; panel.dataset.loaded = '1'; })
+    );
+  });
+  Promise.all(fetches).then(() => {
+    btn.classList.remove('loading');
+    btn.classList.add('done');
+    btn.innerHTML = '▲ Collapse All';
+  });
+}
+
+// ===== AGENDA TABS + PERSISTENCE + ASANA SYNC =====
+function switchAgendaTab(tab) {
+  document.querySelectorAll('.agenda-tab').forEach(t => t.classList.remove('active'));
+  document.querySelector('.agenda-tab[data-atab="' + tab + '"]').classList.add('active');
+  document.getElementById('agenda-current').style.display = tab === 'current' ? '' : 'none';
+  document.getElementById('agenda-completed').style.display = tab === 'completed' ? '' : 'none';
+}
+
+function updateAgendaCounts() {
+  document.getElementById('count-current').textContent = document.querySelectorAll('#agenda-current .agenda-item').length;
+  document.getElementById('count-completed').textContent = document.querySelectorAll('#agenda-completed .agenda-item').length;
+}
+
+function toggleAgenda(cb) {
+  const li = cb.closest('.agenda-item');
+  const idx = parseInt(li.dataset.idx);
+  li.classList.toggle('checked', cb.checked);
+  let savedState = [];
+  try { savedState = JSON.parse(localStorage.getItem('dd_agenda') || '[]'); } catch(e) {}
+  savedState[idx] = cb.checked;
+  localStorage.setItem('dd_agenda', JSON.stringify(savedState));
+  const gid = li.dataset.gid;
+  if (gid) {
+    const badge = li.querySelector('.asana-link');
+    const origText = badge ? badge.innerHTML : '';
+    if (badge) badge.textContent = '⏳';
+    fetch('/api/agenda-complete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ taskGid: gid, completed: cb.checked })
+    }).then(r => r.json()).then(data => {
+      if (badge) badge.textContent = data.success ? '✓ Synced' : '⚠ Error';
+      if (badge && data.success) setTimeout(() => badge.innerHTML = origText, 2000);
+    }).catch(() => { if (badge) badge.textContent = '⚠'; });
+  }
+  setTimeout(() => {
+    const targetPanel = cb.checked ? 'agenda-completed' : 'agenda-current';
+    const panel = document.getElementById(targetPanel);
+    const placeholder = panel.querySelector('p');
+    if (placeholder) placeholder.remove();
+    panel.appendChild(li);
+    renumberAgendaItems();
+    updateAgendaCounts();
+    if (!document.querySelector('#agenda-current .agenda-item'))
+      document.getElementById('agenda-current').innerHTML = '<p style="color:var(--slate);font-size:13px;">All items completed!</p>';
+    if (!document.querySelector('#agenda-completed .agenda-item'))
+      document.getElementById('agenda-completed').innerHTML = '<p style="color:var(--slate);font-size:13px;">No completed items yet.</p>';
+  }, 600);
+}
+
+function renumberAgendaItems() {
+  ['agenda-current', 'agenda-completed'].forEach(id => {
+    let c = 1;
+    document.querySelectorAll('#' + id + ' .agenda-item .agenda-num').forEach(n => n.textContent = c++);
+  });
+}
+
+// ===== ADMIN PANEL =====
+function toggleAdmin() {
+  document.getElementById('admin-panel').classList.toggle('show');
+}
+
+async function saveAdmin() {
+  const btn = document.getElementById('admin-save-btn');
+  const status = document.getElementById('admin-status');
+  const jsonStr = document.getElementById('admin-json').value;
+  let parsed;
+  try { parsed = JSON.parse(jsonStr); } catch(e) {
+    status.style.color = 'var(--error)';
+    status.textContent = 'Invalid JSON: ' + e.message;
+    return;
+  }
+  btn.classList.add('saving');
+  btn.textContent = 'Publishing...';
+  status.textContent = '';
+  try {
+    const res = await fetch('/api/update-content', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content: parsed, message: 'Admin panel update — ' + TODAY })
+    });
+    const data = await res.json();
+    if (data.success) {
+      status.style.color = 'var(--success)';
+      status.textContent = '✓ Published (commit ' + data.commit + '). Redeploying...';
+      content = parsed;
+      renderUpdates();
+    } else {
+      status.style.color = 'var(--error)';
+      status.textContent = '✗ Error: ' + (data.error || 'Unknown');
+    }
+  } catch(e) {
+    status.style.color = 'var(--error)';
+    status.textContent = '✗ Network error';
+  }
+  btn.classList.remove('saving');
+  btn.textContent = 'Save & Publish';
+}
+</script>
+</body>
+</html>
