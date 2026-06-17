@@ -1,3 +1,4 @@
+// Sync V2: merges with existing content instead of overwriting
 const ASANA_BASE = 'https://app.asana.com/api/1.0';
 const REPO = 'turgutderman/derman-daily';
 const GITHUB_API = 'https://api.github.com';
