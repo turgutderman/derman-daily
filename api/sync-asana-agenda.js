@@ -103,41 +103,42 @@ export default async function handler(req, res) {
         projects: (t.projects || []).map((p) => p.name),
       }));
 
-    const newContent = JSON.stringify(
-      {
-        agendaTasks,
-        syncedAt: new Date().toISOString(),
-        source: `asana:project:${projectGid}`,
-      },
-      null,
-      2
-    );
-
     // Get current file from GitHub
     const existing = await getGitHubFile(ghToken);
 
-    // Diff: only commit if content changed
+    // Parse existing content to preserve non-sync fields
+    let existingData = {};
     if (existing.exists && existing.content) {
       try {
-        const existingParsed = JSON.parse(existing.content);
-        const newParsed = JSON.parse(newContent);
-        // Compare tasks only (ignore syncedAt timestamp)
-        const existingTasks = JSON.stringify(existingParsed.agendaTasks || []);
-        const newTasks = JSON.stringify(newParsed.agendaTasks || []);
-        if (existingTasks === newTasks) {
-          return res.status(200).json({
-            success: true,
-            changed: false,
-            message: 'No changes detected, skipping commit',
-            taskCount: agendaTasks.length,
-          });
-        }
+        existingData = JSON.parse(existing.content);
       } catch (parseErr) {
-        // If parse fails, proceed with update
+        // If parse fails, start fresh
       }
     }
 
-    // Commit the new content
+    // Diff: only commit if tasks actually changed
+    const existingTasks = JSON.stringify(existingData.agendaTasks || []);
+    const newTasks = JSON.stringify(agendaTasks);
+    if (existingTasks === newTasks) {
+      return res.status(200).json({
+        success: true,
+        changed: false,
+        message: 'No changes detected, skipping commit',
+        taskCount: agendaTasks.length,
+      });
+    }
+
+    // MERGE: preserve all existing fields, only update sync-related ones
+    const mergedData = {
+      ...existingData,
+      agendaTasks,
+      syncedAt: new Date().toISOString(),
+      source: `asana:project:${projectGid}`,
+    };
+
+    const newContent = JSON.stringify(mergedData, null, 2);
+
+    // Commit the merged content
     await putGitHubFile(ghToken, newContent, existing.sha);
 
     return res.status(200).json({
