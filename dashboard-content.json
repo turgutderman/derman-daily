@@ -1,4 +1,42 @@
 {
+  "lastUpdatedBy": "Derman via Claude",
+  "lastUpdated": "2026-06-17",
+  "announcement": {
+    "show": true,
+    "type": "success",
+    "text": "Derman.biz Daily Command Center is live! Calendar, Asana, and content sync automatically."
+  },
+  "callAgenda": {
+    "date": "2026-06-17",
+    "items": []
+  },
+  "pinnedNotes": [
+    {
+      "title": "Dashboard Setup",
+      "text": "New Derman.biz command center deployed. Password-protected. Bonnie and Frances have access. Admin panel available via gear icon.",
+      "date": "2026-06-15"
+    }
+  ],
+  "statusUpdates": [
+    {
+      "project": "MirthPlus",
+      "status": "yellow",
+      "note": "Marketing and content pipeline active. Check Asana for current task status.",
+      "date": "2026-06-17"
+    },
+    {
+      "project": "SailPin",
+      "status": "yellow",
+      "note": "Operations and fulfillment in progress. GHL integration active.",
+      "date": "2026-06-17"
+    },
+    {
+      "project": "Derman.biz",
+      "status": "green",
+      "note": "Advisory operations running. Daily command center deployed.",
+      "date": "2026-06-17"
+    }
+  ],
   "agendaTasks": [
     {
       "gid": "1215740712252960",
