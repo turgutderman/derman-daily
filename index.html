@@ -682,6 +682,8 @@ function renderUpdates() {
       html += '<div style="display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--linen);font-size:13px"><span class="status-dot ' + s.status + '"></span><strong>' + s.project + '</strong> — ' + s.note + ' <span style="font-size:11px;color:var(--slate);margin-left:auto">' + s.date + '</span></div>';
     });
     document.getElementById('status-updates').innerHTML = '<div style="background:var(--warm-white);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(15,36,64,.06)">' + html + '</div>';
+  } else {
+    document.getElementById('status-updates').innerHTML = '<p style="color:var(--slate);font-size:13px;">No status updates yet. Use the admin panel to add project statuses.</p>';
   }
 }
 
