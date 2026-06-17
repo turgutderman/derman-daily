@@ -64,9 +64,15 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  // Auth: check sync secret
+  // Auth: check sync secret (query param) OR Vercel cron secret (header)
   const { secret } = req.query;
-  if (!secret || secret !== process.env.SYNC_SECRET) {
+  const authHeader = req.headers['authorization'];
+  const cronSecret = process.env.CRON_SECRET;
+
+  const isValidQuerySecret = secret && secret === process.env.SYNC_SECRET;
+  const isValidCronSecret = cronSecret && authHeader === `Bearer ${cronSecret}`;
+
+  if (!isValidQuerySecret && !isValidCronSecret) {
     return res.status(401).json({ error: 'Invalid or missing sync secret' });
   }
 
