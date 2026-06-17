@@ -1,396 +1,43 @@
 {
-  "agendaTasks": [
+  "lastUpdatedBy": "Derman via Claude",
+  "lastUpdated": "2026-06-17",
+  "announcement": {
+    "show": true,
+    "type": "success",
+    "text": "Derman.biz Daily Command Center is live! Calendar, Asana, and content sync automatically."
+  },
+  "callAgenda": {
+    "date": "2026-06-17",
+    "items": []
+  },
+  "pinnedNotes": [
     {
-      "gid": "1215740712252960",
-      "name": "Publish a blog post to verify RSS-to-email automation",
-      "due_on": "2026-06-22",
-      "assignee": "Frances Gomez",
-      "notes": "RSS-to-email automation in GHL is set up but unverified. Publish any blog post to trigger the RSS feed and confirm the email sends correctly to subscribers.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1215111526234454",
-      "name": "Set Up Pinterest Posting for MirthPlus Blog Content",
-      "due_on": "2026-06-19",
-      "assignee": "Frances Gomez",
-      "notes": "PINTEREST STRATEGY FOR BLOG POSTS\n\nPinterest is NOT supported by GHL's RSS auto-poster, so it needs a separate approach. Pinterest is important for MirthPlus because wellness content performs very well on the platform — it drives long-tail organic traffic.\n\nOPTION A: Shopify Pinterest Sales Channel (Products)\n1. In Shopify Admin, go to Sales Channels > add the Pinterest channel if not already connected\n2. This will automatically sync MirthPlus products as shoppable pins\n3. This handles product visibility but does NOT post blog articles\n\nOPTION B: Manual Blog Pinning (Blog Posts)\n1. For each blog post you want on Pinterest, create a pin manually at pinterest.com or through a scheduling tool like Tailwind\n2. Each pin needs:\n   - A vertical image (2:3 ratio, ideally 1000x1500px) — can reuse or crop the blog featured image\n   - Pin title = blog post title\n   - Pin description = 2-3 sentence summary with relevant keywords\n   - Destination URL = the Shopify blog post URL\n3. Organize pins into boards by topic (e.g., \"CBD Wellness,\" \"Natural Remedies,\" \"Longevity and Vitality\")\n\nRECOMMENDATION:\nStart with Option B — manually pin the same top 5-10 blog posts being scheduled for social media. If volume grows, evaluate Tailwind for batch scheduling. Shopify Pinterest channel (Option A) is worth setting up in parallel for product pins.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785538554122",
-      "name": "Social Content: Father's Day (Jun 21)",
-      "due_on": "2026-06-16",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for Father's Day.\n\nEvent: June 21, 2026\nAngle: Gift guide for dads, Relief Rub bundles, self-care for fathers\nCategory: Holiday\nFunnel: BOFU (conversion/promo)\nAxis: Brand\n\nPlatforms: IG (Carousel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 gift guide for dads relief rub bundles | Z4 MirthPlus Father's Day\nCTAs: WELCOME20, SAMPLE50, Shop Relief Rub, Shop All\nNote: Major gifting holiday — consider a dedicated Father's Day bundle promo\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785471823066",
-      "name": "Social Content: Independence Day (Jul 4)",
-      "due_on": "2026-07-16",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for Independence Day.\n\nEvent: July 4, 2026\nAngle: Flash sale, patriotic wellness, summer self-care\nCategory: Holiday\nFunnel: BOFU (conversion/promo)\nAxis: Brand\n\nPlatforms: IG (Carousel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 flash sale patriotic wellness | Z4 MirthPlus Independence Day\nCTAs: WELCOME20, SAMPLE50, Shop Relief Rub, Shop All\nNote: Major flash sale opportunity — coordinate with email sequence\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785250516932",
-      "name": "Social Content: National Relaxation Day (Aug 15)",
-      "due_on": "2026-08-01",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for National Relaxation Day.\n\nEvent: August 15, 2026\nAngle: CBD relaxation bundles, self-care routines, rituals not hacks\nCategory: Wellness\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 CBD relaxation bundles self-care | Z4 MirthPlus National Relaxation Day\nCTAs: Quiz, Shop All, Blog\nNote: Great opportunity for relaxation bundle promo — pair with Sleep Drops + Relief Rub\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785472112324",
-      "name": "Social Content: National Book Lovers Day (Aug 9)",
-      "due_on": "2026-07-26",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for National Book Lovers Day.\n\nEvent: August 9, 2026\nAngle: CBD + reading, calm routines, wind-down rituals\nCategory: Wellness\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 CBD + reading calm routines | Z4 MirthPlus National Book Lovers Day\nCTAs: Quiz, Blog, Learn More\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785605436220",
-      "name": "Social Content: 710 / Dab Day (Jul 10)",
-      "due_on": "2026-06-26",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for 710 / Dab Day.\n\nEvent: July 10, 2026\nAngle: Oil-based CBD products, tinctures, extraction quality\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 oil-based CBD products tinctures | Z4 MirthPlus 710 Dab Day\nCTAs: Quiz, Blog, Learn More\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785538618775",
-      "name": "Social Content: Hemp Month Kickoff (Jul 1)",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for Hemp Month Kickoff.\n\nEvent: July 1, 2026\nAngle: Month-long hemp education series, hemp-derived CBD quality\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 month-long hemp education series | Z4 MirthPlus Hemp Month\nCTAs: Quiz, Blog, Learn More\nNote: Kick off a month-long hemp education series across all platforms\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785350023227",
-      "name": "Social Content: National CBD Day (Aug 8)",
-      "due_on": "2026-07-25",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for National CBD Day.\n\nEvent: August 8, 2026\nAngle: Major promo, educational campaign, community engagement push\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 major promo educational campaign | Z4 MirthPlus National CBD Day\nCTAs: Quiz, Shop All, WELCOME20\nNote: BIGGEST cannabis event of Q3 — coordinate with email blast, consider sitewide promo\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505697355924",
-      "name": "[BUDGET-DEPENDENT] LegitScript CBD certification - research only this month",
-      "due_on": "2026-07-14",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: ~$3,995 first year + $1,995 renewal - NOT zero-budget. May task is research + scoping only.\n\nThis month: research only\n- Document full LegitScript application requirements\n- Identify which MirthPlus topical SKUs would qualify (Relief Rub, sample, etc.)\n- Estimate ROI: certification unlocks Meta Ads for topicals - model expected CAC vs. cost\n- Decision deferred until budget available\n\nWhy this is in the May plan:\nIt's the single biggest unlock for paid acquisition once budget exists. Doing the research now means the team can move fast when funding aligns.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214519989465921",
-      "name": "[HIGH] Publish Pillar Blog Post #2 - Calm and Stress Relief",
-      "due_on": "2026-07-10",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nTarget keyword cluster:\n- my brain won't shut off at night (Zone 3, high AI-resistance)\n- natural ways to calm anxiety\n- Bridge to: CBD for stress, ashwagandha for anxiety\n\nSpec (same as Pillar Post #1):\n- 1,500-2,000 words, FAQ blocks, schema, named author, internal links to Calm collection, Ashwagandha PDP, CBD tincture PDP\n\nDistribution after publish:\n- RSS-to-email auto-fires\n- Republish to Medium with canonical link\n- 5 Pinterest pins designed in Canva and pinned to Calm and Stress Relief board\n- Manually share key Q-and-A as Reddit comments where relevant (no link drops)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505698364298",
-      "name": "[HIGH] Reddit brand presence - start in r/CBD, r/sleep, r/anxiety (FREE)",
-      "due_on": "2026-07-03",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Reddit is free. This is reputation work, not promotion.\n\nRules of engagement:\n- Brand handle (e.g., u/MirthPlus_Team) with disclosure in profile bio\n- Never drop product links unless explicitly asked\n- Goal: become helpful - answer questions, share mechanism explanations, point to research (not products)\n- Aim for 5-10 genuine helpful comments per subreddit per week, not posts\n- Always follow each subreddit's self-promotion rules (most are 1:9 or 1:10 - i.e., 9 helpful comments before any self-mention)\n\nWhy this matters: Reddit threads frequently rank in Google for long-tail conversational queries. A helpful brand presence becomes part of search results passively.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505698179929",
-      "name": "[MED] Run Keyword Discovery Prompt #3 (Long-Tail Conversational Queries)",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nUse Prompt 3 from the Keyword Strategy PDF - generates 50 long-tail conversational queries across 6 buckets (Sleep, Stress, Recovery, First-Time CBD, Safety, Lifestyle Fit).\n\nOutput:\n- 50 queries with AI-resistance score, suggested content title, and best format (blog/FAQ/video/PDP copy)\n- Top 10 [PRIORITY]-tagged queries become the editorial calendar for June-August\n\nHow this feeds the rest of the plan:\n- Top 10 priority queries → next 10 blog posts in queue\n- FAQ-format queries → PAA blocks on PDPs (separate task above)\n- Video-format queries → Pinterest pin scripts + future TikTok/IG Reel topics",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505697475525",
-      "name": "[MED] Audit existing blog posts for E-E-A-T signals (author bios, citations)",
-      "due_on": "2026-06-27",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Pure editorial work.\n\nGoogle classifies CBD as YMYL (Your Money or Your Life). Without strong E-E-A-T signals, content won't rank no matter how good the keyword targeting.\n\nAudit checklist (apply to every existing blog post):\n- Named author with bio block at the bottom (no 'by Admin' or 'by MirthPlus Team' alone)\n- Author credentials listed where applicable (e.g., reviewed by [Name], certified herbalist)\n- Peer-reviewed studies linked when benefit claims are made\n- Last-updated date visible\n- Clear FDA disclaimer in footer\n- Internal links to relevant PDPs and other blog posts\n\nOutput:\n- Spreadsheet listing every existing post + which E-E-A-T elements are missing\n- Top 5 most-trafficked posts get fixed first",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505639342739",
-      "name": "[MED] Build local citation list (free directories) for domain authority",
-      "due_on": "2026-07-09",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nLocal citations are free, clean, authoritative links Google values for newer or less-established domains.\n\nFree directories to claim/submit:\n- Google Business Profile (already done? verify)\n- Bing Places for Business\n- Apple Maps Connect\n- Yelp business listing\n- Local Chamber of Commerce (San Diego)\n- Better Business Bureau\n- Industry-specific: Hemp Industry Daily directory, CBD Brand directories (free tiers)\n\nAcceptance criteria:\n- NAP (Name / Address / Phone) is identical across all listings\n- Brand description matches the master brand bio (consistency signal)\n- Logo uploaded to each listing using the standalone Mirthy Man icon (square format)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214517291391477",
-      "name": "May Wrap - Metrics review + June plan handoff",
-      "due_on": "2026-06-17",
-      "assignee": "Frances Gomez",
-      "notes": "End-of-month review.\n\nMetrics to capture:\n- Email list segments: count per segment vs. May 1 baseline\n- Email engagement: open rate, click rate, share clicks (week over week)\n- RSS feed: confirmed live in how many directories?\n- Blog: 2 pillar posts published; sessions per post (GA4); top entry keyword (GSC)\n- Pinterest: profile views, board followers, pin saves\n- Medium: post views + reads\n- Reddit / Quora: comments posted, karma earned, traffic referred (GA4)\n- GSC: ranking change on top 20 keywords vs. May 1 baseline\n\nJune priorities (drafted):\n- Pillar Posts #3 and #4 (Movement and Body Care, Mood and Mindset)\n- Affiliate program launch decision\n- LegitScript application decision (if budget cleared)\n- Pinterest pin volume scaling\n\nOutput:\n- One-page status update posted to project (use Asana status update)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505639170570",
-      "name": "[MED] Add Featured Snippet / People Also Ask blocks to top 5 PDPs",
-      "due_on": "2026-07-08",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Pure copy + schema.\n\nFor Google Featured Snippets, write a 40-60 word direct answer at the top of each target page using exact-match phrasing from the search query.\n\nTop 5 PDPs to update first:\n1. CBD Intensive Relief Rub 2,000mg (target: how does CBD topical work for muscle pain)\n2. Dream Formula Sleep Gummies (target: what's in a sleep gummy)\n3. Colostrum Powder (target: what is colostrum and what does it do)\n4. Creatine Monohydrate (target: what is creatine monohydrate used for)\n5. Ashwagandha (target: what does ashwagandha do for stress)\n\nFormat for each PDP:\n- Top of page: 40-60 word answer block\n- Below: 4-8 FAQ Q-and-A pairs (FAQ schema)\n- Each Q phrased exactly as a real searcher would type it",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505352770409",
-      "name": "[MED] Run Keyword Discovery Prompt #1 (Core Universe) in Claude/ChatGPT",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Use the prompt from the existing Keyword Strategy PDF (Prompt 1: Core Keyword Universe Discovery).\n\nOutput:\n- 50-80 keyword candidates across 4 categories: Symptom-First, Benefit-Bridge, Comparison and Trust, Local and Regulatory\n- Each tagged with: search intent, AI-resistance score, content format, example title\n\nTD's clarification (per content plan margin notes):\nMake sure to add these keyword groups missing from earlier analysis:\n- Insomnia variants\n- Back pain (CBD topical)\n- Daily stress / chronic stress\n- Migraine - CBD roll-on applied to temples (specific differentiated angle)\n\nValidation step:\n- Run top 30 candidates through Ubersuggest free tier or Google Trends to confirm volume and seasonality\n- Apply MirthPlus Priority Filter: Volume 200+, Difficulty under 35, AI-resistance Med/High, Brand Fit, Commercial Intent\n- Save validated list as the May 2026 keyword baseline for content planning",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505639274457",
-      "name": "[LOW] Affiliate program - scope and vendor research only (no launch in May)",
-      "due_on": "2026-07-14",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 in May - Research only. Launch deferred to June at earliest.\n\nFree / low-cost options to evaluate:\n- GoHighLevel native affiliate features - already paid for, $0 marginal. Evaluate first.\n- Refersion free trial - then paid\n- Goaffpro - free tier available\n- UpPromote - free Shopify app for small programs\n\nOutput:\n- One-page comparison: features, transaction fees, branded affiliate portal availability, FTC disclosure tooling\n- Recommendation memo for June kickoff\n\nWhy deferred:\nThe customer referral mechanism inside emails (high-priority task above) handles peer-driven word of mouth in May. A formal affiliate program adds a layer of complexity that doesn't pay back without a content/creator pipeline ready to receive it.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214517290810505",
-      "name": "[MED] Quora - set up brand account + answer 5 wellness questions",
-      "due_on": "2026-07-08",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nQuora answers index in Google for long-tail queries and compound for years.\n\nSetup:\n- Brand profile with full credentials in bio\n- Link to mirthplus.com (allowed in bio, not in answers)\n\nTarget 5 questions in May:\n- What does CBD actually do for sleep?\n- Is CBD safe to take daily?\n- How do I know if a CBD brand is legit?\n- What's the difference between CBD and THC?\n- Does magnesium really help with sleep?\n\nAnswer format:\n- 200-400 words each\n- Lead with the mechanism (Feynman style)\n- End with a soft 'the brand I work with focuses on this - happy to share if helpful' - never a hard sell",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505697688507",
-      "name": "[HIGH] Add referral trigger inside every email (free tool selection)",
-      "due_on": "2026-06-25",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 to start - Use GHL's native affiliate/referral feature first. If insufficient, evaluate free tiers of ReferralCandy or Viral Loops.\n\nMechanics:\n- Each email gets a one-line Share MirthPlus with a friend CTA\n- Referrer earns: store credit OR % discount on next order\n- Friend earns: a first-order discount (e.g., 15% off)\n- Tracking via unique URL or code per subscriber\n\nTool comparison (free tiers):\n- GoHighLevel native: $0, integrates directly with existing CRM. Try this first.\n- ReferralCandy: 30-day free trial, then paid. Defer.\n- Viral Loops: Free tier for up to 1,000 referrers. Possible if GHL native is too limited.\n\nAcceptance criteria:\n- Referral CTA live in at least one email by May 18\n- Tracking confirmed end-to-end (test referral fires through to a discount applied at checkout)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505638110327",
-      "name": "[HIGH] Submit RSS feed to Feedly (FREE)",
-      "due_on": "2026-06-11",
-      "assignee": "Turgut Derman",
-      "notes": "Cost: $0 - Feedly is free for publisher submission.\n\nGo to feedly.com, create or use existing brand account, search for the MirthPlus feed URL. Once it's discoverable, users can follow it directly inside Feedly.\n\nWhy Feedly first: Feedly has the largest active RSS reader audience of wellness-interested users. Free tier is sufficient.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505697757640",
-      "name": "[HIGH] Publish Pillar Blog Post #1 - Sleep and Recovery",
-      "due_on": "2026-07-01",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Owned content. Highest long-term ROI.\n\nTarget keyword cluster:\n- why do I wake up at 3am (Zone 3, AI-resistant)\n- natural ways to sleep through the night\n- Bridge to: CBD for sleep, magnesium glycinate for sleep\n\nArticle spec:\n- Length: 1,500-2,000 words\n- Format: educational deep-dive with mechanism explanations (Feynman-style)\n- Include: 4-6 FAQ-formatted Q-and-A blocks (target People Also Ask)\n- Include: schema markup (Article + FAQ)\n- Author byline with bio (E-E-A-T signal)\n- Internal links to: Sleep collection page, Dream Formula Sleep Gummies PDP, Colostrum Powder PDP\n- FDA disclaimer footer\n- Voice: warm, evidence-based, structure/function language only\n\nDistribution after publish:\n- Auto-fires via RSS-to-email automation (subtask above)\n- Manually pin to Pinterest\n- Republish on Medium with canonical link (subtask below)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505581400612",
-      "name": "[HIGH] Set up Medium brand account and republish first pillar post (FREE)",
-      "due_on": "2026-06-20",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Medium publishing is free under a brand account.\n\nSteps:\n1. Create Medium account: MirthPlus (verify domain)\n2. Add brand bio, logo (Mirthy Man icon), link to mirthplus.com\n3. Republish Pillar Blog Post #1 with canonical link back to mirthplus.com (critical for SEO - prevents duplicate content penalty)\n4. Add 5 relevant tags: wellness, sleep, CBD, supplements, self-care\n\nWhy Medium: Medium has a built-in wellness audience that discovers content organically. Republishing with canonical preserves SEO juice for mirthplus.com while extending reach for free.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505581462939",
-      "name": "[MED] Implement Schema Markup: Product, Article, FAQ (FREE)",
-      "due_on": "2026-06-30",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Shopify supports schema natively or via free apps.\n\nSchema types to add:\n- Product schema on every PDP: price, rating, availability, brand\n- Article schema on every blog post: author, datePublished, image\n- FAQ schema on PDPs and pillar blog posts (FAQ blocks)\n- Review schema on PDPs that have customer reviews\n\nWhy schema matters in 2026: Schema is what feeds Google's AI Overviews and rich snippets. Without it, MirthPlus content is invisible to the new search experience even when ranked.\n\nValidation: Test every implementation with Google's free Rich Results Test at search.google.com/test/rich-results before publishing.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214519989349894",
-      "name": "[HIGH] Set up Google Search Console + baseline ranking snapshot (FREE)",
-      "due_on": "2026-06-23",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Google Search Console is free and the foundation of any SEO program.\n\nAcceptance criteria:\n- mirthplus.com verified in GSC (already done? confirm)\n- XML sitemap submitted\n- Core Web Vitals report reviewed; flag any Poor pages for fixes\n- Coverage report reviewed; document any indexing errors\n- Export current top 20 ranking keywords as a baseline snapshot - this becomes the May 31 comparison point in 3-6 months\n\nFree SEO tools to bookmark:\n- Google Search Console (free)\n- Google Trends (free) - for seasonality\n- Ubersuggest free tier (3 searches/day) - volume + difficulty estimates\n- AnswerThePublic free tier (3 searches/day) - conversational queries",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214517291881681",
-      "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
-      "due_on": "2026-06-11",
-      "assignee": "Turgut Derman",
-      "notes": "Cost: $0 - Feedspot publisher submission is free.\n\nSteps:\n1. Submit feed at feedspot.com/fs/publishers\n2. Email anuj@feedspot.com requesting inclusion in the Top 80 Wellness RSS Feeds list\n3. Pitch should mention: THC-free positioning, five wellness-outcome content pillars, USDA Organic + Triple Tested credentials\n\nWhy this matters: Inclusion in Feedspot's curated wellness list exposes MirthPlus to thousands of wellness aggregators that pull from that ranking. This is the single highest-leverage free RSS distribution play.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214517291769773",
-      "name": "[MED] Segment 12K email list: never-purchased / one-time / repeat",
-      "due_on": "2026-06-24",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Native GHL segmentation.\n\nCreate three core segments inside GHL based on order history:\n- Segment A - Never Purchased: education-first nurture, sample/discount focus\n- Segment B - One-Time Buyer: reorder triggers, cross-sell into adjacent need-state\n- Segment C - Repeat Buyer: decision-reinforcement content, referral nudge, subscription pitch when ready\n\nAcceptance criteria:\n- Three segments created and counted in GHL\n- Each segment has a saved smart list that updates automatically as orders change\n- Document segment counts (baseline) in a shared note for May 31 review",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214505697355905",
-      "name": "[MED] Define weekly content email cadence + first 4-week calendar",
-      "due_on": "2026-06-24",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Email is the engine; cadence is the discipline.\n\nPlan one wellness-value email per week tied to one of the five pillars. NOT a sales push - value first, gentle product mention second.\n\nMay 2026 email calendar (proposed):\n- Week of May 11: Pillar - Sleep and Recovery. Topic: Why your 3am wake-up isn't random. Soft mention of Dream Formula Sleep Gummies.\n- Week of May 18: Pillar - Calm and Stress Relief. Topic: The 90-second reset your nervous system already knows. Soft mention of CBD tincture.\n- Week of May 25: Pillar - Movement and Body Care. Topic: What emu oil actually does (the napkin sketch). Mention of Relief Rub.\n- Week of June 1: Pillar - Clean Living. Topic: How to read a COA without a chemistry degree.\n\nEach email must include:\n- One low-friction share this line near the bottom (referral nudge)\n- UTM parameters on every link\n- FDA disclaimer footer where structure/function claims appear",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214208969078477",
-      "name": "[Pinterest] 90-day review + scale decision",
-      "due_on": "2026-08-05",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nCritical decision gate. If still under 10,000 impressions:\n- Allocate $50/month to promoted pins\n- This is the risk mitigation from the Strategic Blueprint\n\nAlso: re-score Channel dimension from Gap Analysis (currently 1/5).\n\nSource: Pinterest Marketing Blueprint Section 7.1",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214209169646215",
-      "name": "[Pinterest] Launch promoted pins ($30–50/mo) on top organic performers",
-      "due_on": "2026-07-18",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nPromote top 3 organic performing pins. CRITICAL: non-CBD products only (MB Drops, Ashwagandha, Digestive Enzymes).\n\nUse Pinterest Performance+ campaign type for automated targeting.\nBudget: $1–2/day across 2–3 pins.\nTrack: impressions, clicks, CPC, conversions via Pinterest Tag.\n\nSource: Pinterest Marketing Blueprint Section 3, Task 3.1",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214209152699742",
-      "name": "[Pinterest] 60-day performance review",
-      "due_on": "2026-07-05",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nSecond checkpoint. Targets:\n- Impressions: 10,000–25,000/month\n- Outbound clicks: 100–300/month\n- Quiz completions from Pinterest: 10–25\n\nDecision: If impressions < 5,000, consider Canva Pro upgrade, increase Idea Pin frequency, or try video pins.\n\nSource: Pinterest Marketing Blueprint Section 7.1",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214208889675392",
-      "name": "[Pinterest] Quarterly full performance audit + 2027 planning",
-      "due_on": "2026-12-15",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nFull year-end performance audit:\n- Total Pinterest-attributed revenue\n- Best performing boards, pin types, content themes\n- Channel ROI calculation\n- Follower growth trajectory\n- Recommendations for 2027 Pinterest strategy\n- Re-score Channel dimension from Gap Analysis\n\nSource: Pinterest Marketing Blueprint Sections 7 + 7.1",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214208968483137",
-      "name": "[Pinterest] CRO audit on Pinterest landing pages",
-      "due_on": "2026-09-01",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nOptimize Shopify pages receiving Pinterest traffic:\n- A/B test product page layouts\n- Quiz landing page copy optimization\n- Blog post CTA testing for pin-driven visitors\n- Review bounce rate and time-on-page for Pinterest-sourced sessions\n\nSource: Pinterest Marketing Blueprint Section 3, Task 3.5",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214208889689517",
-      "name": "[Pinterest] Holiday gifting campaign (gift guide pins, bundle promotions)",
-      "due_on": "2026-11-01",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nCreate holiday-specific content:\n- 'Wellness Gift Guide' carousel pins\n- Gift bundle feature pins\n- 'Self-care gifts for her' series\n- Target keywords: 'wellness gifts for mom', 'CBD gift set', 'self care gifts'\n\nCross-reference Black Friday / Cyber Monday Shopify promotions.\n\nSource: Pinterest Marketing Blueprint Section 3, Task 3.3",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214209169845005",
-      "name": "[Pinterest] Scale to 15 pins/day for seasonal peak (Oct–Dec)",
-      "due_on": "2026-10-01",
-      "assignee": "Frances Gomez",
-      "notes": "Phase 3 — Pinterest Blueprint V1.0.\n\nPinterest health/wellness search volume spikes September through January.\n- Increase pinning to 15/day\n- Add seasonal content: 'fall wellness routine', 'winter immune support'\n- Run CRO on Pinterest-driven landing pages\n\nSource: Pinterest Marketing Blueprint Section 3, Task 3.2",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214154606445526",
-      "name": "[P2] Set up Google Search Console for MirthPlus.com",
-      "due_on": "2026-06-23",
-      "assignee": "Frances Gomez",
-      "notes": "P2 — Strategic Audit Apr 22.\n\nVerify domain ownership, submit sitemap. Track MB organic keyword rankings and overall site indexing health.\n\n📌 PINTEREST: When setting up Search Console, also verify that Pinterest Rich Pins are pulling correct meta data. Check: og:title, og:description, og:image tags on product pages and blog posts. These are what Pinterest uses to generate Rich Pin content.\n\nSource: Strategic Audit — ACTIVATE Phase Tasks.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1213948222725043",
-      "name": "Research & set up Google Ads account for MB",
-      "due_on": "2026-06-27",
-      "assignee": "Frances Gomez",
-      "notes": "Paid Ads — Keyword research, ad copy, landing page alignment. Prepare for May launch.\n\n📌 PINTEREST ALIGNMENT: Google Ads = Track 2 (MB) paid channel. Pinterest Promoted Pins = Track 1 paid channel (non-CBD products only, launching Jun 20 after 60 days organic data). These are complementary, not competing.\n\nSee Pinterest Blueprint Section 8 (Budget) and DECISION task for full paid channel strategy.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1213948223306586",
-      "name": "Zone 3 — Symptom-First content (160 keywords, highest SEO priority)",
-      "due_on": "2026-06-30",
-      "assignee": "Frances Gomez",
-      "notes": "Ongoing SEO — Zone 3 keywords have no CBD mention and are most AI-resistant. From KW Framework V2.1.\n\n📌 PINTEREST INTEGRATION: Zone 3 symptom-first keywords are Pinterest's highest-value content. Every Zone 3 blog post should generate 3–5 pins for Sleep Rituals, Natural Stress Relief, or Recovery Routines boards. These match what Pinterest users search for ('why do I wake up at 3am', 'muscle tight after workout', 'calm racing mind').\n\nSee Pinterest Blueprint Section 5.1 for full Zone → Board mapping.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
+      "title": "Dashboard Setup",
+      "text": "New Derman.biz command center deployed. Password-protected. Bonnie and Frances have access. Admin panel available via gear icon.",
+      "date": "2026-06-15"
     }
   ],
-  "syncedAt": "2026-06-17T15:44:20.343Z",
-  "source": "asana:project:1213948223325688"
+  "statusUpdates": [
+    {
+      "project": "MirthPlus",
+      "status": "yellow",
+      "note": "Marketing and content pipeline active. Check Asana for current task status.",
+      "date": "2026-06-17"
+    },
+    {
+      "project": "SailPin",
+      "status": "yellow",
+      "note": "Operations and fulfillment in progress. GHL integration active.",
+      "date": "2026-06-17"
+    },
+    {
+      "project": "Derman.biz",
+      "status": "green",
+      "note": "Advisory operations running. Daily command center deployed.",
+      "date": "2026-06-17"
+    }
+  ],
+  "agendaTasks": [],
+  "syncedAt": "",
+  "source": ""
 }
