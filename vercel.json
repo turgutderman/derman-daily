@@ -3,12 +3,6 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "cleanUrls": true,
-  "crons": [
-    {
-      "path": "/api/sync-asana-agenda",
-      "schedule": "*/15 * * * *"
-    }
-  ],
   "headers": [
     {
       "source": "/api/sync-asana-agenda",
