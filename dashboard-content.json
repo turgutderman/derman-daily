@@ -219,16 +219,6 @@
       ]
     },
     {
-      "gid": "1214505581400612",
-      "name": "[HIGH] Set up Medium brand account and republish first pillar post (FREE)",
-      "due_on": "2026-06-20",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Medium publishing is free under a brand account.\n\nSteps:\n1. Create Medium account: MirthPlus (verify domain)\n2. Add brand bio, logo (Mirthy Man icon), link to mirthplus.com\n3. Republish Pillar Blog Post #1 with canonical link back to mirthplus.com (critical for SEO - prevents duplicate content penalty)\n4. Add 5 relevant tags: wellness, sleep, CBD, supplements, self-care\n\nWhy Medium: Medium has a built-in wellness audience that discovers content organically. Republishing with canonical preserves SEO juice for mirthplus.com while extending reach for free.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505581462939",
       "name": "[MED] Implement Schema Markup: Product, Article, FAQ (FREE)",
       "due_on": "2026-06-30",
@@ -379,6 +369,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T21:45:07.139Z",
+  "syncedAt": "2026-06-18T23:45:06.767Z",
   "source": "asana:project:1213948223325688"
 }
