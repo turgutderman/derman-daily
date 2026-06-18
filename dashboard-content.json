@@ -149,16 +149,6 @@
       ]
     },
     {
-      "gid": "1214505698179929",
-      "name": "[MED] Run Keyword Discovery Prompt #3 (Long-Tail Conversational Queries)",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nUse Prompt 3 from the Keyword Strategy PDF - generates 50 long-tail conversational queries across 6 buckets (Sleep, Stress, Recovery, First-Time CBD, Safety, Lifestyle Fit).\n\nOutput:\n- 50 queries with AI-resistance score, suggested content title, and best format (blog/FAQ/video/PDP copy)\n- Top 10 [PRIORITY]-tagged queries become the editorial calendar for June-August\n\nHow this feeds the rest of the plan:\n- Top 10 priority queries → next 10 blog posts in queue\n- FAQ-format queries → PAA blocks on PDPs (separate task above)\n- Video-format queries → Pinterest pin scripts + future TikTok/IG Reel topics",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505697475525",
       "name": "[MED] Audit existing blog posts for E-E-A-T signals (author bios, citations)",
       "due_on": "2026-06-27",
@@ -409,6 +399,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T02:30:09.080Z",
+  "syncedAt": "2026-06-18T20:00:11.586Z",
   "source": "asana:project:1213948223325688"
 }
