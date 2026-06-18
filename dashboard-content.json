@@ -179,16 +179,6 @@
       ]
     },
     {
-      "gid": "1214517291391477",
-      "name": "May Wrap - Metrics review + June plan handoff",
-      "due_on": "2026-06-17",
-      "assignee": "Frances Gomez",
-      "notes": "End-of-month review.\n\nMetrics to capture:\n- Email list segments: count per segment vs. May 1 baseline\n- Email engagement: open rate, click rate, share clicks (week over week)\n- RSS feed: confirmed live in how many directories?\n- Blog: 2 pillar posts published; sessions per post (GA4); top entry keyword (GSC)\n- Pinterest: profile views, board followers, pin saves\n- Medium: post views + reads\n- Reddit / Quora: comments posted, karma earned, traffic referred (GA4)\n- GSC: ranking change on top 20 keywords vs. May 1 baseline\n\nJune priorities (drafted):\n- Pillar Posts #3 and #4 (Movement and Body Care, Mood and Mindset)\n- Affiliate program launch decision\n- LegitScript application decision (if budget cleared)\n- Pinterest pin volume scaling\n\nOutput:\n- One-page status update posted to project (use Asana status update)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505639170570",
       "name": "[MED] Add Featured Snippet / People Also Ask blocks to top 5 PDPs",
       "due_on": "2026-07-08",
@@ -419,6 +409,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T01:00:12.037Z",
+  "syncedAt": "2026-06-18T02:30:09.080Z",
   "source": "asana:project:1213948223325688"
 }
