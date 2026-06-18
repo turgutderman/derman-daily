@@ -99,16 +99,6 @@
       ]
     },
     {
-      "gid": "1214785538618775",
-      "name": "Social Content: Hemp Month Kickoff (Jul 1)",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for Hemp Month Kickoff.\n\nEvent: July 1, 2026\nAngle: Month-long hemp education series, hemp-derived CBD quality\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 month-long hemp education series | Z4 MirthPlus Hemp Month\nCTAs: Quiz, Blog, Learn More\nNote: Kick off a month-long hemp education series across all platforms\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214785350023227",
       "name": "Social Content: National CBD Day (Aug 8)",
       "due_on": "2026-07-25",
@@ -389,6 +379,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T20:45:07.345Z",
+  "syncedAt": "2026-06-18T21:45:07.139Z",
   "source": "asana:project:1213948223325688"
 }
