@@ -179,16 +179,6 @@
       ]
     },
     {
-      "gid": "1214505352770409",
-      "name": "[MED] Run Keyword Discovery Prompt #1 (Core Universe) in Claude/ChatGPT",
-      "due_on": "2026-06-18",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Use the prompt from the existing Keyword Strategy PDF (Prompt 1: Core Keyword Universe Discovery).\n\nOutput:\n- 50-80 keyword candidates across 4 categories: Symptom-First, Benefit-Bridge, Comparison and Trust, Local and Regulatory\n- Each tagged with: search intent, AI-resistance score, content format, example title\n\nTD's clarification (per content plan margin notes):\nMake sure to add these keyword groups missing from earlier analysis:\n- Insomnia variants\n- Back pain (CBD topical)\n- Daily stress / chronic stress\n- Migraine - CBD roll-on applied to temples (specific differentiated angle)\n\nValidation step:\n- Run top 30 candidates through Ubersuggest free tier or Google Trends to confirm volume and seasonality\n- Apply MirthPlus Priority Filter: Volume 200+, Difficulty under 35, AI-resistance Med/High, Brand Fit, Commercial Intent\n- Save validated list as the May 2026 keyword baseline for content planning",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505639274457",
       "name": "[LOW] Affiliate program - scope and vendor research only (no launch in May)",
       "due_on": "2026-07-14",
@@ -399,6 +389,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T20:00:11.586Z",
+  "syncedAt": "2026-06-18T20:45:07.345Z",
   "source": "asana:project:1213948223325688"
 }
