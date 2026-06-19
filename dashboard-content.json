@@ -39,16 +39,6 @@
   ],
   "agendaTasks": [
     {
-      "gid": "1215740712252960",
-      "name": "Publish a blog post to verify RSS-to-email automation",
-      "due_on": "2026-06-22",
-      "assignee": "Frances Gomez",
-      "notes": "RSS-to-email automation in GHL is set up but unverified. Publish any blog post to trigger the RSS feed and confirm the email sends correctly to subscribers.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1215111526234454",
       "name": "Set Up Pinterest Posting for MirthPlus Blog Content",
       "due_on": "2026-06-19",
@@ -369,6 +359,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-18T23:45:06.767Z",
+  "syncedAt": "2026-06-19T20:15:06.820Z",
   "source": "asana:project:1213948223325688"
 }
