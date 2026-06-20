@@ -39,16 +39,6 @@
   ],
   "agendaTasks": [
     {
-      "gid": "1215111526234454",
-      "name": "Set Up Pinterest Posting for MirthPlus Blog Content",
-      "due_on": "2026-06-19",
-      "assignee": "Frances Gomez",
-      "notes": "PINTEREST STRATEGY FOR BLOG POSTS\n\nPinterest is NOT supported by GHL's RSS auto-poster, so it needs a separate approach. Pinterest is important for MirthPlus because wellness content performs very well on the platform — it drives long-tail organic traffic.\n\nOPTION A: Shopify Pinterest Sales Channel (Products)\n1. In Shopify Admin, go to Sales Channels > add the Pinterest channel if not already connected\n2. This will automatically sync MirthPlus products as shoppable pins\n3. This handles product visibility but does NOT post blog articles\n\nOPTION B: Manual Blog Pinning (Blog Posts)\n1. For each blog post you want on Pinterest, create a pin manually at pinterest.com or through a scheduling tool like Tailwind\n2. Each pin needs:\n   - A vertical image (2:3 ratio, ideally 1000x1500px) — can reuse or crop the blog featured image\n   - Pin title = blog post title\n   - Pin description = 2-3 sentence summary with relevant keywords\n   - Destination URL = the Shopify blog post URL\n3. Organize pins into boards by topic (e.g., \"CBD Wellness,\" \"Natural Remedies,\" \"Longevity and Vitality\")\n\nRECOMMENDATION:\nStart with Option B — manually pin the same top 5-10 blog posts being scheduled for social media. If volume grows, evaluate Tailwind for batch scheduling. Shopify Pinterest channel (Option A) is worth setting up in parallel for product pins.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214785471823066",
       "name": "Social Content: Independence Day (Jul 4)",
       "due_on": "2026-07-16",
@@ -359,6 +349,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-19T20:15:06.820Z",
+  "syncedAt": "2026-06-20T05:45:07.223Z",
   "source": "asana:project:1213948223325688"
 }
