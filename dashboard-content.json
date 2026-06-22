@@ -71,7 +71,7 @@
     {
       "gid": "1214785605436220",
       "name": "Social Content: 710 / Dab Day (Jul 10)",
-      "due_on": "2026-06-26",
+      "due_on": "2026-06-25",
       "assignee": "Frances Gomez",
       "notes": "Prepare and schedule social media content across all 8 platforms for 710 / Dab Day.\n\nEvent: July 10, 2026\nAngle: Oil-based CBD products, tinctures, extraction quality\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 oil-based CBD products tinctures | Z4 MirthPlus 710 Dab Day\nCTAs: Quiz, Blog, Learn More\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
       "projects": [
@@ -121,7 +121,7 @@
     {
       "gid": "1214505697475525",
       "name": "[MED] Audit existing blog posts for E-E-A-T signals (author bios, citations)",
-      "due_on": "2026-06-27",
+      "due_on": "2026-06-25",
       "assignee": "Frances Gomez",
       "notes": "Cost: $0 - Pure editorial work.\n\nGoogle classifies CBD as YMYL (Your Money or Your Life). Without strong E-E-A-T signals, content won't rank no matter how good the keyword targeting.\n\nAudit checklist (apply to every existing blog post):\n- Named author with bio block at the bottom (no 'by Admin' or 'by MirthPlus Team' alone)\n- Author credentials listed where applicable (e.g., reviewed by [Name], certified herbalist)\n- Peer-reviewed studies linked when benefit claims are made\n- Last-updated date visible\n- Clear FDA disclaimer in footer\n- Internal links to relevant PDPs and other blog posts\n\nOutput:\n- Spreadsheet listing every existing post + which E-E-A-T elements are missing\n- Top 5 most-trafficked posts get fixed first",
       "projects": [
@@ -231,7 +231,7 @@
     {
       "gid": "1214517291769773",
       "name": "[MED] Segment 12K email list: never-purchased / one-time / repeat",
-      "due_on": "2026-06-24",
+      "due_on": "2026-06-23",
       "assignee": "Frances Gomez",
       "notes": "Cost: $0 - Native GHL segmentation.\n\nCreate three core segments inside GHL based on order history:\n- Segment A - Never Purchased: education-first nurture, sample/discount focus\n- Segment B - One-Time Buyer: reorder triggers, cross-sell into adjacent need-state\n- Segment C - Repeat Buyer: decision-reinforcement content, referral nudge, subscription pitch when ready\n\nAcceptance criteria:\n- Three segments created and counted in GHL\n- Each segment has a saved smart list that updates automatically as orders change\n- Document segment counts (baseline) in a shared note for May 31 review",
       "projects": [
@@ -349,6 +349,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-20T05:45:07.223Z",
+  "syncedAt": "2026-06-22T23:30:10.256Z",
   "source": "asana:project:1213948223325688"
 }
