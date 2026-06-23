@@ -39,16 +39,6 @@
   ],
   "agendaTasks": [
     {
-      "gid": "1214785471823066",
-      "name": "Social Content: Independence Day (Jul 4)",
-      "due_on": "2026-07-16",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for Independence Day.\n\nEvent: July 4, 2026\nAngle: Flash sale, patriotic wellness, summer self-care\nCategory: Holiday\nFunnel: BOFU (conversion/promo)\nAxis: Brand\n\nPlatforms: IG (Carousel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 flash sale patriotic wellness | Z4 MirthPlus Independence Day\nCTAs: WELCOME20, SAMPLE50, Shop Relief Rub, Shop All\nNote: Major flash sale opportunity — coordinate with email sequence\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214785250516932",
       "name": "Social Content: National Relaxation Day (Aug 15)",
       "due_on": "2026-08-01",
@@ -64,16 +54,6 @@
       "due_on": "2026-07-26",
       "assignee": "Frances Gomez",
       "notes": "Prepare and schedule social media content across all 8 platforms for National Book Lovers Day.\n\nEvent: August 9, 2026\nAngle: CBD + reading, calm routines, wind-down rituals\nCategory: Wellness\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 CBD + reading calm routines | Z4 MirthPlus National Book Lovers Day\nCTAs: Quiz, Blog, Learn More\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
-      "gid": "1214785605436220",
-      "name": "Social Content: 710 / Dab Day (Jul 10)",
-      "due_on": "2026-06-25",
-      "assignee": "Frances Gomez",
-      "notes": "Prepare and schedule social media content across all 8 platforms for 710 / Dab Day.\n\nEvent: July 10, 2026\nAngle: Oil-based CBD products, tinctures, extraction quality\nCategory: Cannabis\nFunnel: TOFU (awareness/education)\nAxis: CBD\n\nPlatforms: IG (Reel), FB, Pinterest, X, YouTube, TikTok, Tumblr, LinkedIn\nKeywords: Z3 oil-based CBD products tinctures | Z4 MirthPlus 710 Dab Day\nCTAs: Quiz, Blog, Learn More\n\nRef: MirthPlus Social Media Calendar Jun-Aug 2026 V3.0",
       "projects": [
         "MirthPlus: Marketing & Content"
       ]
@@ -319,6 +299,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T15:30:10.521Z",
+  "syncedAt": "2026-06-23T18:00:12.235Z",
   "source": "asana:project:1213948223325688"
 }
