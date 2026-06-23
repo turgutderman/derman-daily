@@ -149,16 +149,6 @@
       ]
     },
     {
-      "gid": "1214505697688507",
-      "name": "[HIGH] Add referral trigger inside every email (free tool selection)",
-      "due_on": "2026-06-25",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 to start - Use GHL's native affiliate/referral feature first. If insufficient, evaluate free tiers of ReferralCandy or Viral Loops.\n\nMechanics:\n- Each email gets a one-line Share MirthPlus with a friend CTA\n- Referrer earns: store credit OR % discount on next order\n- Friend earns: a first-order discount (e.g., 15% off)\n- Tracking via unique URL or code per subscriber\n\nTool comparison (free tiers):\n- GoHighLevel native: $0, integrates directly with existing CRM. Try this first.\n- ReferralCandy: 30-day free trial, then paid. Defer.\n- Viral Loops: Free tier for up to 1,000 referrers. Possible if GHL native is too limited.\n\nAcceptance criteria:\n- Referral CTA live in at least one email by May 18\n- Tracking confirmed end-to-end (test referral fires through to a discount applied at checkout)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505638110327",
       "name": "[HIGH] Submit RSS feed to Feedly (FREE)",
       "due_on": "2026-06-11",
@@ -299,6 +289,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T18:00:12.235Z",
+  "syncedAt": "2026-06-23T18:45:07.996Z",
   "source": "asana:project:1213948223325688"
 }
