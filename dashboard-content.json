@@ -219,16 +219,6 @@
       ]
     },
     {
-      "gid": "1214517291769773",
-      "name": "[MED] Segment 12K email list: never-purchased / one-time / repeat",
-      "due_on": "2026-06-23",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Native GHL segmentation.\n\nCreate three core segments inside GHL based on order history:\n- Segment A - Never Purchased: education-first nurture, sample/discount focus\n- Segment B - One-Time Buyer: reorder triggers, cross-sell into adjacent need-state\n- Segment C - Repeat Buyer: decision-reinforcement content, referral nudge, subscription pitch when ready\n\nAcceptance criteria:\n- Three segments created and counted in GHL\n- Each segment has a saved smart list that updates automatically as orders change\n- Document segment counts (baseline) in a shared note for May 31 review",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505697355905",
       "name": "[MED] Define weekly content email cadence + first 4-week calendar",
       "due_on": "2026-06-24",
@@ -339,6 +329,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T03:15:07.226Z",
+  "syncedAt": "2026-06-23T04:00:11.271Z",
   "source": "asana:project:1213948223325688"
 }
