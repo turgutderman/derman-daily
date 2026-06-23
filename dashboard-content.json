@@ -209,16 +209,6 @@
       ]
     },
     {
-      "gid": "1214519989349894",
-      "name": "[HIGH] Set up Google Search Console + baseline ranking snapshot (FREE)",
-      "due_on": "2026-06-23",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Google Search Console is free and the foundation of any SEO program.\n\nAcceptance criteria:\n- mirthplus.com verified in GSC (already done? confirm)\n- XML sitemap submitted\n- Core Web Vitals report reviewed; flag any Poor pages for fixes\n- Coverage report reviewed; document any indexing errors\n- Export current top 20 ranking keywords as a baseline snapshot - this becomes the May 31 comparison point in 3-6 months\n\nFree SEO tools to bookmark:\n- Google Search Console (free)\n- Google Trends (free) - for seasonality\n- Ubersuggest free tier (3 searches/day) - volume + difficulty estimates\n- AnswerThePublic free tier (3 searches/day) - conversational queries",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214517291881681",
       "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
       "due_on": "2026-06-11",
@@ -349,6 +339,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-22T23:30:10.256Z",
+  "syncedAt": "2026-06-23T03:15:07.226Z",
   "source": "asana:project:1213948223325688"
 }
