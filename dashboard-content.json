@@ -261,7 +261,7 @@
     {
       "gid": "1214154606445526",
       "name": "[P2] Set up Google Search Console for MirthPlus.com",
-      "due_on": "2026-06-23",
+      "due_on": "2026-06-25",
       "assignee": "Frances Gomez",
       "notes": "P2 — Strategic Audit Apr 22.\n\nVerify domain ownership, submit sitemap. Track MB organic keyword rankings and overall site indexing health.\n\n📌 PINTEREST: When setting up Search Console, also verify that Pinterest Rich Pins are pulling correct meta data. Check: og:title, og:description, og:image tags on product pages and blog posts. These are what Pinterest uses to generate Rich Pin content.\n\nSource: Strategic Audit — ACTIVATE Phase Tasks.",
       "projects": [
@@ -289,6 +289,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T18:45:07.996Z",
+  "syncedAt": "2026-06-23T20:30:10.451Z",
   "source": "asana:project:1213948223325688"
 }
