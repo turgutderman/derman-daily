@@ -219,16 +219,6 @@
       ]
     },
     {
-      "gid": "1214505697355905",
-      "name": "[MED] Define weekly content email cadence + first 4-week calendar",
-      "due_on": "2026-06-24",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Email is the engine; cadence is the discipline.\n\nPlan one wellness-value email per week tied to one of the five pillars. NOT a sales push - value first, gentle product mention second.\n\nMay 2026 email calendar (proposed):\n- Week of May 11: Pillar - Sleep and Recovery. Topic: Why your 3am wake-up isn't random. Soft mention of Dream Formula Sleep Gummies.\n- Week of May 18: Pillar - Calm and Stress Relief. Topic: The 90-second reset your nervous system already knows. Soft mention of CBD tincture.\n- Week of May 25: Pillar - Movement and Body Care. Topic: What emu oil actually does (the napkin sketch). Mention of Relief Rub.\n- Week of June 1: Pillar - Clean Living. Topic: How to read a COA without a chemistry degree.\n\nEach email must include:\n- One low-friction share this line near the bottom (referral nudge)\n- UTM parameters on every link\n- FDA disclaimer footer where structure/function claims appear",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214208969078477",
       "name": "[Pinterest] 90-day review + scale decision",
       "due_on": "2026-08-05",
@@ -329,6 +319,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T04:00:11.271Z",
+  "syncedAt": "2026-06-23T15:30:10.521Z",
   "source": "asana:project:1213948223325688"
 }
