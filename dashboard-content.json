@@ -169,16 +169,6 @@
       ]
     },
     {
-      "gid": "1214505581462939",
-      "name": "[MED] Implement Schema Markup: Product, Article, FAQ (FREE)",
-      "due_on": "2026-06-30",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Shopify supports schema natively or via free apps.\n\nSchema types to add:\n- Product schema on every PDP: price, rating, availability, brand\n- Article schema on every blog post: author, datePublished, image\n- FAQ schema on PDPs and pillar blog posts (FAQ blocks)\n- Review schema on PDPs that have customer reviews\n\nWhy schema matters in 2026: Schema is what feeds Google's AI Overviews and rich snippets. Without it, MirthPlus content is invisible to the new search experience even when ranked.\n\nValidation: Test every implementation with Google's free Rich Results Test at search.google.com/test/rich-results before publishing.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214517291881681",
       "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
       "due_on": "2026-06-11",
@@ -289,6 +279,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-23T20:30:10.451Z",
+  "syncedAt": "2026-06-25T04:45:07.911Z",
   "source": "asana:project:1213948223325688"
 }
