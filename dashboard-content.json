@@ -99,16 +99,6 @@
       ]
     },
     {
-      "gid": "1214505697475525",
-      "name": "[MED] Audit existing blog posts for E-E-A-T signals (author bios, citations)",
-      "due_on": "2026-06-25",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Pure editorial work.\n\nGoogle classifies CBD as YMYL (Your Money or Your Life). Without strong E-E-A-T signals, content won't rank no matter how good the keyword targeting.\n\nAudit checklist (apply to every existing blog post):\n- Named author with bio block at the bottom (no 'by Admin' or 'by MirthPlus Team' alone)\n- Author credentials listed where applicable (e.g., reviewed by [Name], certified herbalist)\n- Peer-reviewed studies linked when benefit claims are made\n- Last-updated date visible\n- Clear FDA disclaimer in footer\n- Internal links to relevant PDPs and other blog posts\n\nOutput:\n- Spreadsheet listing every existing post + which E-E-A-T elements are missing\n- Top 5 most-trafficked posts get fixed first",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505639342739",
       "name": "[MED] Build local citation list (free directories) for domain authority",
       "due_on": "2026-07-09",
@@ -269,6 +259,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-26T03:15:05.516Z",
+  "syncedAt": "2026-06-26T03:45:05.831Z",
   "source": "asana:project:1213948223325688"
 }
