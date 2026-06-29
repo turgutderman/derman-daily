@@ -79,16 +79,6 @@
       ]
     },
     {
-      "gid": "1214519989465921",
-      "name": "[HIGH] Publish Pillar Blog Post #2 - Calm and Stress Relief",
-      "due_on": "2026-07-10",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0\n\nTarget keyword cluster:\n- my brain won't shut off at night (Zone 3, high AI-resistance)\n- natural ways to calm anxiety\n- Bridge to: CBD for stress, ashwagandha for anxiety\n\nSpec (same as Pillar Post #1):\n- 1,500-2,000 words, FAQ blocks, schema, named author, internal links to Calm collection, Ashwagandha PDP, CBD tincture PDP\n\nDistribution after publish:\n- RSS-to-email auto-fires\n- Republish to Medium with canonical link\n- 5 Pinterest pins designed in Canva and pinned to Calm and Stress Relief board\n- Manually share key Q-and-A as Reddit comments where relevant (no link drops)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214505698364298",
       "name": "[HIGH] Reddit brand presence - start in r/CBD, r/sleep, r/anxiety (FREE)",
       "due_on": "2026-07-03",
@@ -249,6 +239,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-29T22:00:11.017Z",
+  "syncedAt": "2026-06-29T22:30:09.259Z",
   "source": "asana:project:1213948223325688"
 }
