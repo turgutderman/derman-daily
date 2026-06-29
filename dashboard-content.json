@@ -149,16 +149,6 @@
       ]
     },
     {
-      "gid": "1214505697757640",
-      "name": "[HIGH] Publish Pillar Blog Post #1 - Sleep and Recovery",
-      "due_on": "2026-07-01",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Owned content. Highest long-term ROI.\n\nTarget keyword cluster:\n- why do I wake up at 3am (Zone 3, AI-resistant)\n- natural ways to sleep through the night\n- Bridge to: CBD for sleep, magnesium glycinate for sleep\n\nArticle spec:\n- Length: 1,500-2,000 words\n- Format: educational deep-dive with mechanism explanations (Feynman-style)\n- Include: 4-6 FAQ-formatted Q-and-A blocks (target People Also Ask)\n- Include: schema markup (Article + FAQ)\n- Author byline with bio (E-E-A-T signal)\n- Internal links to: Sleep collection page, Dream Formula Sleep Gummies PDP, Colostrum Powder PDP\n- FDA disclaimer footer\n- Voice: warm, evidence-based, structure/function language only\n\nDistribution after publish:\n- Auto-fires via RSS-to-email automation (subtask above)\n- Manually pin to Pinterest\n- Republish on Medium with canonical link (subtask below)",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214517291881681",
       "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
       "due_on": "2026-06-11",
@@ -259,6 +249,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-29T05:15:06.135Z",
+  "syncedAt": "2026-06-29T22:00:11.017Z",
   "source": "asana:project:1213948223325688"
 }
