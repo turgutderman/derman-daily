@@ -132,7 +132,7 @@
       "gid": "1214505638110327",
       "name": "[HIGH] Submit RSS feed to Feedly (FREE)",
       "due_on": "2026-06-11",
-      "assignee": "Turgut Derman",
+      "assignee": "Frances Gomez",
       "notes": "Cost: $0 - Feedly is free for publisher submission.\n\nGo to feedly.com, create or use existing brand account, search for the MirthPlus feed URL. Once it's discoverable, users can follow it directly inside Feedly.\n\nWhy Feedly first: Feedly has the largest active RSS reader audience of wellness-interested users. Free tier is sufficient.",
       "projects": [
         "MirthPlus: Marketing & Content"
@@ -142,7 +142,7 @@
       "gid": "1214517291881681",
       "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
       "due_on": "2026-06-11",
-      "assignee": "Turgut Derman",
+      "assignee": "Frances Gomez",
       "notes": "Cost: $0 - Feedspot publisher submission is free.\n\nSteps:\n1. Submit feed at feedspot.com/fs/publishers\n2. Email anuj@feedspot.com requesting inclusion in the Top 80 Wellness RSS Feeds list\n3. Pitch should mention: THC-free positioning, five wellness-outcome content pillars, USDA Organic + Triple Tested credentials\n\nWhy this matters: Inclusion in Feedspot's curated wellness list exposes MirthPlus to thousands of wellness aggregators that pull from that ranking. This is the single highest-leverage free RSS distribution play.",
       "projects": [
         "MirthPlus: Marketing & Content"
@@ -239,6 +239,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-07-01T20:00:15.360Z",
+  "syncedAt": "2026-07-01T23:15:10.380Z",
   "source": "asana:project:1213948223325688"
 }
