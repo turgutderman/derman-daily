@@ -231,7 +231,7 @@
     {
       "gid": "1213948223306586",
       "name": "Zone 3 — Symptom-First content (160 keywords, highest SEO priority)",
-      "due_on": "2026-07-01",
+      "due_on": "2026-07-02",
       "assignee": "Frances Gomez",
       "notes": "Ongoing SEO — Zone 3 keywords have no CBD mention and are most AI-resistant. From KW Framework V2.1.\n\n📌 PINTEREST INTEGRATION: Zone 3 symptom-first keywords are Pinterest's highest-value content. Every Zone 3 blog post should generate 3–5 pins for Sleep Rituals, Natural Stress Relief, or Recovery Routines boards. These match what Pinterest users search for ('why do I wake up at 3am', 'muscle tight after workout', 'calm racing mind').\n\nSee Pinterest Blueprint Section 5.1 for full Zone → Board mapping.",
       "projects": [
@@ -239,6 +239,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-06-30T22:00:14.655Z",
+  "syncedAt": "2026-07-01T20:00:15.360Z",
   "source": "asana:project:1213948223325688"
 }
