@@ -129,19 +129,9 @@
       ]
     },
     {
-      "gid": "1214505638110327",
-      "name": "[HIGH] Submit RSS feed to Feedly (FREE)",
-      "due_on": "2026-06-11",
-      "assignee": "Frances Gomez",
-      "notes": "Cost: $0 - Feedly is free for publisher submission.\n\nGo to feedly.com, create or use existing brand account, search for the MirthPlus feed URL. Once it's discoverable, users can follow it directly inside Feedly.\n\nWhy Feedly first: Feedly has the largest active RSS reader audience of wellness-interested users. Free tier is sufficient.",
-      "projects": [
-        "MirthPlus: Marketing & Content"
-      ]
-    },
-    {
       "gid": "1214517291881681",
       "name": "[HIGH] Submit RSS to Feedspot + email anuj@feedspot.com for Top 80 Wellness list",
-      "due_on": "2026-06-11",
+      "due_on": "2026-07-03",
       "assignee": "Frances Gomez",
       "notes": "Cost: $0 - Feedspot publisher submission is free.\n\nSteps:\n1. Submit feed at feedspot.com/fs/publishers\n2. Email anuj@feedspot.com requesting inclusion in the Top 80 Wellness RSS Feeds list\n3. Pitch should mention: THC-free positioning, five wellness-outcome content pillars, USDA Organic + Triple Tested credentials\n\nWhy this matters: Inclusion in Feedspot's curated wellness list exposes MirthPlus to thousands of wellness aggregators that pull from that ranking. This is the single highest-leverage free RSS distribution play.",
       "projects": [
@@ -221,7 +211,7 @@
     {
       "gid": "1213948222725043",
       "name": "Research & set up Google Ads account for MB",
-      "due_on": "2026-07-02",
+      "due_on": "2026-07-06",
       "assignee": "Frances Gomez",
       "notes": "Paid Ads — Keyword research, ad copy, landing page alignment. Prepare for May launch.\n\n📌 PINTEREST ALIGNMENT: Google Ads = Track 2 (MB) paid channel. Pinterest Promoted Pins = Track 1 paid channel (non-CBD products only, launching Jun 20 after 60 days organic data). These are complementary, not competing.\n\nSee Pinterest Blueprint Section 8 (Budget) and DECISION task for full paid channel strategy.",
       "projects": [
@@ -229,6 +219,6 @@
       ]
     }
   ],
-  "syncedAt": "2026-07-02T19:30:12.022Z",
+  "syncedAt": "2026-07-02T22:30:12.264Z",
   "source": "asana:project:1213948223325688"
 }
