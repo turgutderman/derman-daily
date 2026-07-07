@@ -37,7 +37,18 @@
       "date": "2026-06-17"
     }
   ],
-  "agendaTasks": [],
-  "syncedAt": "2026-07-03T20:15:05.950Z",
+  "agendaTasks": [
+    {
+      "gid": "1216339402954008",
+      "name": "Clean up & appeal MirthPlus Pinterest account",
+      "due_on": "2026-07-12",
+      "assignee": null,
+      "notes": "Pinterest Account Clean-Up & Appeal\n\nThe MirthPlus Pinterest account (@mirthplus) has an ad policy violation blocking all paid ads. Before submitting an appeal, the profile needs to be cleaned up to remove flagged language.\n\nSTEP 1 — Fix the bio\nCurrent bio contains 'Pain Relief, Recovery' — flagged therapeutic language under Pinterest's wellness ad policy. Likely contributed to the violation.\nReplace with: 'Premium wellness products for active bodies and calm minds. Everyday balance, naturally. mirthplus.com'\n\nSTEP 2 — Fix the Instagram handle\nThe Instagram link shows @plusmirth but should be @mirthplus. Update in profile settings.\n\nSTEP 3 — Review pins for policy-triggering copy\nScan created/saved pins for language like 'pain relief', 'CBD', 'hemp', 'recovery' in titles or descriptions. Soften or remove where found.\n\nSTEP 4 — Submit the appeal\nGo to Pinterest Business Help and submit an ad account appeal. A clean profile improves chances of reinstatement.\nIMPORTANT: Even after appeal, Pinterest does NOT allow CBD product advertising. The appeal only restores account standing. Ads can only run on non-CBD wellness SKUs.\n\nAFTER REINSTATEMENT\nThe account has only 2 followers and 260 monthly views — essentially dormant. Build an organic pinning strategy around wellness lifestyle content (sleep, stress, balance) — not product/ingredient-first messaging.\n\nProfile URL: pinterest.com/mirthplus",
+      "projects": [
+        "MirthPlus: Marketing & Content"
+      ]
+    }
+  ],
+  "syncedAt": "2026-07-07T00:30:21.518Z",
   "source": "asana:project:1213948223325688"
 }
